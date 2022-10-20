@@ -2,10 +2,93 @@
 {% block content %}
    
 <form action="/add" method="post">
-    <input type="text" size="50" name="task">
+    <p>ツイッター名（ニックネーム）<br>
+        <input type="text" size="30" name="display_name">
+    </p>
+
+    <p>TwitterのID<br>
+        <input type="text" size="50" name="twitter_id">
+    </p>
+    
+
+    <p>年代と性別<br>
+        <input type="radio" name="era" value="yung_man"> 〜20代の男性
+        <input type="radio" name="era" value="man"> 30代〜40代の男性
+        <input type="radio" name="era" value="old_man"> 50代〜の男性
+        <br>
+        <input type="radio" name="era" value="yung_lady"> 〜20代の女性
+        <input type="radio" name="era" value="lady"> 30代〜40代の女性
+        <input type="radio" name="era" value="old_lady"> 50代〜の女性
+    </p>
+
+
+    <p>sunabacoの受講会場<br>
+        <select name="place">
+        <option value="AMAKUSA">AMAKUSA</option>
+        <option value="YATUSHIRO">YATUSHIRO</option>
+        <option value="FUKUOKA">FUKUOKA</option>
+        <option value="TAKAMATSU">TAKAMATSU</option>
+        <option value="IDOBA">IDOBA</option>
+        <option value="EBETSU">EBETSU</option>
+        <option value="KOZA">KOZA</option>
+        </select>
+    </p>
+
+   
+    <p>卒業後の成果を一言でお願いします！！<br>
+        <input type="text" size="50" name="hitokoto_0">
+    </p>
+
+
+    <p>これまでsunabacoで受講した講座<br>
+        <input type="text" size="50" name="users_type">
+    </p>
+    
+    <p>卒業から初報酬（収入）までの時間<br>
+        <input type="text" size="50" name="Total_time">
+    </p>
+    <p>方法があらかじめわかっていた場合の初報酬までの時間（目安）<br>
+        <input type="text" size="50" name="effort_time">
+    </p>
+    <p>この案件（転職先の業務）を行う上で最も重要だと思った言語<br>
+        <input type="text" size="50" name="important_lang">
+    </p>
+    <p>sunabaco受講前のプログラミングスキル<br>
+        <input type="text" size="50" name="originally_level">
+    </p>
+    <p>初報酬までにかかった費用（教材費、web会員費など）<br>
+        <input type="text" size="50" name="cost_first">
+    </p>
+    <p>初案件の報酬金額<br>
+        <input type="text" size="50" name="reward_first">
+    </p>
+
+
+    <p>卒業してからの行動<br>
+        <textarea name="content_1" cols="30" rows="5"></textarea>
+    </p>
+    <p>仕事をとるための行動<br>
+        <textarea name="content_2" cols="30" rows="5"></textarea>
+    </p>
+    <p>取れた案件の内容<br>
+        <textarea name="content_3" cols="30" rows="5"></textarea>
+    </p>
+    <p>仕事が取れてからの行動<br>
+        <textarea name="content_4" cols="30" rows="5"></textarea>
+    </p>
+    <p>感想<br>
+        <textarea name="kansou" cols="30" rows="5"></textarea>
+    </p>
+    <p>受講生（受講希望者）に一言お願いします！🙇<br>
+        <textarea name="memo_last" cols="30" rows="5"></textarea>
+    </p>
+
+    
+    
+
     <input type="submit" name="save" value="送信">
 </form>
 
-<a href="/list">タスク一覧へ</a>
+<a href="/">mainページへ</a>
 
 {% endblock %}

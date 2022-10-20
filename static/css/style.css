@@ -1,3 +1,129 @@
-h2{
-    background-color: tomato;
+.header{
+    background-color: #078b8b;
+}
+
+.footer{
+    background-color: #33a3a3;
+}
+
+body{
+    background-color: white;
+
+}
+
+
+.title_place{
+    color:rgb(76, 33, 25);
+    text-align: center;
+
+}
+
+.title_place span{
+    color: rgb(164, 54, 34);
+}
+
+/* 投稿者間の縦幅 */
+.report {
+    margin-top: 20px;
+    background-color: white;
+}
+
+
+/* ブロック１とブロック２ */
+.report .uvoice {
+    display: table;
+    background: white;
+    margin-bottom: 4px;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ブロック１（左側） */
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/* プロ写真と名前ブロックの幅 */
+.report .uvoice dt {
+    width: 150px;
+}
+
+
+/* 一言コメント欄をプロ写の横に持ってくる */
+.report .uvoice dd, .report .uvoice dt {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+dt {
+    display: block;
+}
+
+
+/* プロフィール画像を丸くカット */
+.report .uvoice dt img {
+    /* 丸の大きさ */
+    width: 100px;
+    /* 角取り（フィレット） */
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+/* 写真下の文字に関するところ */
+.report .uvoice dt {
+    font-size: 12px;
+    text-align: center;
+} 
+
+
+
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.uvoice dt div p{
+    font-size: 15px;
+}
+
+
+/* 吹き出し（かっこ部分） */
+.arrow_box{
+	position: relative;
+    background-color: #e2e2e3f3;
+    border-radius: 40px;
+	border: 3px solid #181f1f;
+    padding: 25px;
+}
+.arrow_box:after{
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+/* 一言コメントないのspanタグ */
+.report .uvoice dd p span {
+    display: block;
+    font-size: 12px;
+    color: tomato;
+    margin-top: 10px;
+    margin-left: 0em;
+    margin-bottom: 5px;
 }
