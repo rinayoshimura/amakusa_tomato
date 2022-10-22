@@ -2,10 +2,12 @@
 
 {% block content %}
    
-<h1 class="title_place">🍅sunabaco in amakusa🍅</h1>
-<p>天草の卒業生を紹介</p>
 
+<h1 class="title_place">🍅sunabaco in amakusa🍅</h1>
+<p>amakusaの卒業生を紹介</p>
 {% for item in task_list %}
+
+
 <div class ="report">
     <dl class ="uvoice">
         <table border="1">
@@ -24,7 +26,6 @@
             <dd>
                 <div class="arrow_box">
                     <p><h2>{{item["hitokoto_0"]}}</h2></p>
-                    <p><span>これまでのsunabco受講歴</span><br> {{item["users_type"]}}</p>
                 </div>
             </dd>
         </table>
