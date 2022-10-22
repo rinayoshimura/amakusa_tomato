@@ -2,6 +2,12 @@
 {% block content %}
    
 <form action="/add" method="post">
+
+    <h2>入力フォーム</h2>
+    <p>
+        お手数ですが、できるだけ具体的に回答をよろしくお願いします<br><br>
+    </p>
+
     <p>Twitterアカウント名<br>
         <input type="text" size="30" name="display_name">
     </p>
@@ -12,8 +18,8 @@
     
 
     <p>性別<br>
-        <input type="radio" name="era" value="man"> 男性
-        <input type="radio" name="era" value="woman"> 女性
+        <input type="radio" name="seibetu" value="man"> 男性
+        <input type="radio" name="seibetu" value="woman"> 女性
     </p>
 
     <p>年代<br>
@@ -22,7 +28,12 @@
         <input type="radio" name="era" value="old"> 50代〜
     </p>
 
-    
+    <p>SUNABACOで何かしらの講座を受講した経験はありますか？？<br>
+        <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">はい
+        <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">いいえ
+    </p>
+
+
     <p>sunabacoの受講会場<br>
         <select name="place">
         <option value="AMAKUSA">AMAKUSA</option>
@@ -32,55 +43,84 @@
         <option value="IDOBA">IDOBA</option>
         <option value="EBETSU">EBETSU</option>
         <option value="KOZA">KOZA</option>
+        <option value="ONLINE">ONLINE</option>
         </select>
     </p>
 
-   
-    <p>卒業後の成果を一言でお願いします！！<br>
-        <input type="text" size="50" name="hitokoto_0">
-    </p>
-
-
-    <p>これまでsunabacoで受講した講座<br>
-        <input type="text" size="50" name="seibetu">
-    </p>
     
-    <p>卒業から初報酬（収入）までの時間<br>
-        <input type="text" size="50" name="Total_time">
-    </p>
-    <p>方法があらかじめわかっていた場合の初報酬までの時間（目安）<br>
-        <input type="text" size="50" name="sunabaco">
-    </p>
-    <p>この案件（転職先の業務）を行う上で最も重要だと思った言語<br>
-        <input type="text" size="50" name="hitokoto_ten">
-    </p>
-    <p>sunabaco受講前のプログラミングスキル<br>
-        <input type="text" size="50" name="content_ten1">
-    </p>
-    <p>初報酬までにかかった費用（教材費、web会員費など）<br>
-        <input type="text" size="50" name="content_ten2">
-    </p>
-    <p>初案件の報酬金額<br>
-        <input type="text" size="50" name="reward_first">
-    </p>
 
 
-    <p>卒業してからの行動<br>
-        <textarea name="content_1" cols="30" rows="5"></textarea>
+
+
+   
+    <p>プロフィールの見出しになる部分です！<br>
+        一番自分に近いものを選んでください！
+        <input type="radio" name="hitokoto_0" value="在宅で仕事をしています！">在宅で仕事をしています！<br>
+        <input type="radio" name="hitokoto_0" value="案件をとった事があります！"> 案件をとった事があります！<br>
+        <input type="radio" name="hitokoto_0" value="フリーランスで活動しています！"> フリーランスで活動しています！<br>
+        <input type="radio" name="hitokoto_0" value="在宅でもできる副業をしています！">在宅でもできる副業をしています！<br>
+        <input type="radio" name="hitokoto_0" value="副業でお小遣いを稼いでいます！"> 副業でお小遣いを稼いでいます！<br>
+        <input type="radio" name="hitokoto_0" value="個人事業主として活動しています！"> 個人事業主として活動しています！<br>
     </p>
-    <p>仕事をとるための行動<br>
+
+    <p>人生で初めて取り組んだ案件を見つけた場所をできるだけ具体的に教えてください！<br>
+        （例 webのクラウドワークスというサイトに会員登録をして応募しました! 知人から教えてもらった〇〇というサイトから探しました など）<br>
+        <input type="text" size="100" name="content_1">
+    </p>
+
+    <p>初めて受注した案件の業務内容を具体的に教えてください<br>
         <textarea name="content_2" cols="30" rows="5"></textarea>
     </p>
-    <p>取れた案件の内容<br>
+
+    <p>初めての案件にかかった時間（案件をとってから完了するまで）<br>
+        <input type="text" size="10" name="Total_time">
+    </p>
+
+    <p>初めて受注した案件に取り組んでみて、頑張ったこと、大変だった事、追加で勉強した事などがあれば、詳しく教えてください！<br>
         <textarea name="content_3" cols="30" rows="5"></textarea>
     </p>
-    <p>仕事が取れてからの行動<br>
+
+    <p>もしよければ初案件の報酬金額を教えてください！<br>
+        <input type="text" size="30" name="reward_first">
+    </p>
+
+
+
+
+
+
+
+    <p>プロフィールの見出しになる部分です<br>
+        自分に一番近いものを選んでください！
+        <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで就職（転職）できました!">SUNABACOのおかげで就職（転職）できました!<br>
+        <input type="radio" name="hitokoto_ten" value="プログラミングの仕事が楽しいです！"> プログラミングの仕事が楽しいです！<br>
+        <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで考え方が変わりました!"> SUNABACOのおかげで考え方が変わりました!<br>
+        <input type="radio" name="hitokoto_ten" value="在宅で仕事をしています！"> 在宅で仕事をしています！<br>
+        <input type="radio" name="hitokoto_ten" value="プログラミングは楽しい！"> プログラミングは楽しい！<br>
+    </p>
+
+
+    <p>就職先・転職先を見つけた場所をできるだけ具体的に教えてください！<br>
+        （例 転職サイトのリクナビネクストで今の会社に応募しました！　SUNABACOの同期から、市役所で出ていた求人を教えてもらいました！ など）<br>
+        <input type="text" size="100" name="content_ten1">
+
+    </p>
+
+    <p>就職先・転職先の仕事内容を具体的に教えてください！<br>
+        <input type="text" size="100" name="content_ten2">
+    </p>
+
+    <p>SUNABACO卒業後に就職・転職をして、プログラミングに関わる仕事をするにあたり、今の仕事について「楽しいと感じる事」「むずかしい（辛い）」と感じる事を教えてください<br>
         <textarea name="content_ten3" cols="30" rows="5"></textarea>
     </p>
-    <p>感想<br>
+
+    <h4>創業された方</h4>
+    <p>もし可能であれば、創業してどのようなことをされているのか（どのような会社を創業したのか）を教えてください！<br>
         <textarea name="sougyou" cols="30" rows="5"></textarea>
     </p>
-    <p>受講生（受講希望者）に一言お願いします！🙇<br>
+
+
+    <p>これから「在宅で仕事がしたい！」と考えている人にアドバイスをお願いします！🙇<br>
         <textarea name="memo_last" cols="30" rows="5"></textarea>
     </p>
 
