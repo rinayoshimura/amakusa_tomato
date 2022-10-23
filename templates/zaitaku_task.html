@@ -2,9 +2,9 @@
 
 {% block content %}
    
-<h1 class="title_place">🍅在宅ワークのページ🍅</h1>
+<h1 class="title_place">🍅個人ページ🍅</h1>
 
-{% for item in amakusa_list %}
+{% for item in zaitaku_task %}
 
 <h3>{{item["display_name"]}}さんのページ</h3>
 <div class ="report">
@@ -18,16 +18,18 @@
             </dt>
             <dd>
                 <div class="arrow_box">
-                    <p><h2>{{item["hitokoto_0"]}}</h2></p>
+                    <h2>{{item["hitokoto_0"]}}</h2>
+                    <p>{{item["place"]}}</p>
+                    <p>{{item["seibetu"]}}</p>
+                    <p>{{item["sunabaco"]}}</p>                    
+
                 </div>
             </dd>
         </table>
     </dl>  
 </div>
     
-<form action="/del/{{item['id']}}" method="post">
-    <input type="submit" value="削除" onclick="return check()">
-</form>
+<a href="/zaitaku_list">戻る</a>
 {% endfor %}
 
 

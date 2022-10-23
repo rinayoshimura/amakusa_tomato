@@ -3,8 +3,7 @@
 {% block content %}
    
 
-<h1 class="title_place">🍅sunabaco in fukuoka🍅</h1>
-<p>fukuokaの卒業生を紹介</p>
+<h1 class="title_place">🍅在宅🍅</h1>
 {% for item in task_list %}
 
 
@@ -19,8 +18,8 @@
                 
                 <div><p>{{item["display_name"]}}</p></div>
                 <br>
-                <form action="/task/{{item['id']}}" method="post">
-                    <input type="submit" value="プロフィールを表示">
+                <form action="/zaitaku_task/{{item['id']}}" method="post">
+                    <input type="submit" value="プロフィール">
                 </form>
             </dt>
             <dd>
