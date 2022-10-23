@@ -177,7 +177,7 @@ def del_task(id):
 
 #個人情報表示機能
 @app.route("/task/<int:id>",methods = ["POST"])
-def amakusa_task(id):
+def zaitaku_task(id):
      #「sqlite3でcolor.dbに接続してね」ということをconnに代入
     conn = sqlite3.connect("try.db")
     #「sqlite3で接続したものを操作してね」ということをcに代入
