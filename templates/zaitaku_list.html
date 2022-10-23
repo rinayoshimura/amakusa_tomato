@@ -12,7 +12,7 @@
         <table border="1">
             <dt>
                 
-                <img src="https://static.yosetti.com/assets/img/icon_dummy2/52.jpg" mid="2251582">
+                <img src="{{ user_image }}" mid="2251582">
                 
                 
                 
@@ -32,11 +32,10 @@
 </div>
     
 <form action="/del/{{item['id']}}" method="post">
-    <input type="submit" value="削除" onclick="return check()">
+    <input type="submit" value="削除">
 </form>
 {% endfor %}
 
-<a href="/add">タスク追加ページ</a>
 <a href="/">戻る</a>
 
 

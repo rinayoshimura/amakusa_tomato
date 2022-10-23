@@ -4,11 +4,17 @@ from operator import truediv
 from ssl import HAS_TLSv1_1
 from time import time
 from flask import Flask, render_template ,request,redirect,session
+import os
 
 import sqlite3,datetime
 
 #これからappという名前でFlaskアプリを作っていく
 app = Flask(__name__)
+
+IMG_FOLDER = os.path.join('static', 'IMG')
+
+app.config['UPLOAD_FOLDER'] = IMG_FOLDER
+
 
 #main.htmlにとぶ
 @app.route("/")
@@ -114,9 +120,12 @@ def zaitaku_list():
         task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_0":row[3],"seibetu":row[4],"place":row[5]})
     #color.dbとの接続を終了
     c.close()
+
+    Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+    
     #データの中身を確認
     print(task_list)
-    return render_template("zaitaku_list.html", task_list = task_list)
+    return render_template("zaitaku_list.html", task_list = task_list,user_image=Flask_Logo)
 
 
 
@@ -161,7 +170,7 @@ def del_task(id):
     conn.commit()
     #color.dbとの接続を終了
     c.close()
-    return redirect("/amakusa_list")
+    return redirect("/")
 
 
 #個人情報表示機能(在宅)
@@ -172,7 +181,7 @@ def zaitaku_task(id):
     #「sqlite3で接続したものを操作してね」ということをcに代入
     c = conn.cursor()
     #()内のSQL文を実行
-    c.execute("SELECT * FROM users where class_00 = '在宅' AND id = ?;",(id,))
+    c.execute("SELECT id,display_name,twitter_id,era,place,hitokoto_0,seibetu,Total_time,sunabaco,reward_first,content_1,content_2,content_3,memo_last FROM users where class_00 = '在宅' AND id =?;",(id,))
     #タスクリストを入れる配列を定義
     zaitaku_task = []
     #繰り返し分
@@ -194,12 +203,12 @@ def ten_task(id):
     #「sqlite3で接続したものを操作してね」ということをcに代入
     c = conn.cursor()
     #()内のSQL文を実行
-    c.execute("SELECT * FROM users where class_00 = '就職・転職' AND id = ?;",(id,))
+    c.execute("SELECT id,display_name,twitter_id,era,place,seibetu,sunabaco,hitokoto_ten,content_ten1,content_ten2,content_ten3,memo_last FROM users where class_00 = '就職・転職' AND id = ?;",(id,))
     #タスクリストを入れる配列を定義
     ten_task = []
     #繰り返し分
     for row in c.fetchall():
-        ten_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"hitokoto_ten":row[5],"seibetu":row[6],"Total_time":row[7],"sunabaco":row[8],"hitokoto_ten":row[9],"content_ten1":row[10],"content_ten2":row[11],"reward_first":row[12],"content_1":row[13],"content_2":row[14],"content_3":row[15],"content_ten3":row[16],"sougyou":row[17],"memo_last":row[18]})
+        ten_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"seibetu":row[5],"sunabaco":row[6],"hitokoto_ten":row[7],"content_ten1":row[8],"content_ten2":row[9],"content_ten3":row[10],"memo_last":row[11]})
     #color.dbとの接続を終了
     c.close()
     #データの中身を確認
