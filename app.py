@@ -1,5 +1,5 @@
 #flaskをインポート
-from crypt import methods
+# from crypt import methods
 from operator import truediv
 from ssl import HAS_TLSv1_1
 from time import time
