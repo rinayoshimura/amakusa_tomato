@@ -104,6 +104,19 @@ def add_post():
 
 
 
+#  #taskの作成----------追加したところーーーーーー
+#         c.execute("SELECT seibetu,era FROM users WHERE class_00 = '在宅';")
+#         seibetu_list = []
+#         era_list=[]
+#         for row in c.fetchall():
+#             seibetu_list.append({"seibetu":row[0]})
+#             era_list.append({"era":row[0]})
+#             seibetu=seibetu_list
+#             if "男性"==seibetu: 
+#                 Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+#             else:
+#                 Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+
 #表示機能(在宅)
 @app.route("/zaitaku_list")
 def zaitaku_list():
@@ -112,16 +125,34 @@ def zaitaku_list():
     #「sqlite3で接続したものを操作してね」ということをcに代入
     c = conn.cursor()
     #()内のSQL文を実行
+    #task_listの作成
     c.execute("SELECT id,display_name,era,hitokoto_0,seibetu,place FROM users where class_00 = '在宅';")
-    #タスクリストを入れる配列を定義
+    # c.execute("SELECT seibetu,era FROM users WHERE class_00 = '在宅';")
     task_list = []
-    #繰り返し分
+    seibetu = []
+    # era_list=[]
     for row in c.fetchall():
         task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_0":row[3],"seibetu":row[4],"place":row[5]})
+        seibetu.append({"seibetu":row[4]})
+        #taskの作成----------追加したところーーーーーー
+        
+        # seibetu_list.append({"seibetu":row[0]})
+        # era_list.append({"era":row[0]})
+        # seibetu=seibetu_list
+        if "男性"==seibetu: 
+            Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+        else:
+            Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+        
+
+   
+
+        
+    
+
+    #------------------------------------------  
     #color.dbとの接続を終了
     c.close()
-
-    Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
     
     #データの中身を確認
     print(task_list)
