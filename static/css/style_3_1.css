@@ -93,7 +93,7 @@ section{
 
 section:nth-of-type(2n){
 /*装飾のためのCSS*/
-  background:#eee;
+  background:white;
 }
 
 /*---------*/
@@ -155,7 +155,6 @@ section:nth-of-type(2n){
     top:49%;
 }
 
-
 .situmon_zaitaku_1{
     position:relative;
     width:300px;
@@ -186,4 +185,91 @@ section:nth-of-type(2n){
     border-right-color:#B3E692;
     right:100%;
     top:49%;
+}
+
+
+
+/*回答の吹き出し*/
+
+.ans_zaitaku_1{
+    background-color:white;
+    color:#333333;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px orange;
+    margin-top: 5vh;
+    position: absolute;
+    top:180px;
+    right: 50px;
+    padding: 0.3em 1em 2em 1em;
+    box-shadow:2px 2px 0 rgba(0,0,0,.1);
+    border-radius: 30px;
+    opacity: 0.80;
+    width: 300px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+.ans_zaitaku_2{
+    background-color:white;
+    color:#333333;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px orange;
+    margin-top: 55vh;
+    position: absolute;
+    top:180px;
+    right: 50px;
+    padding: 0.3em 1em 2em 1em;
+    box-shadow:2px 2px 0 rgba(0,0,0,.1);
+    border-radius: 30px;
+    opacity: 0.80;
+    width: 300px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+.ans_zaitaku_3{
+    background-color:white;
+    color:#333333;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px orange;
+    margin-top: 110vh;
+    position: absolute;
+    top:180px;
+    right: 50px;
+    padding: 0.3em 1em 2em 1em;
+    box-shadow:2px 2px 0 rgba(0,0,0,.1);
+    border-radius: 30px;
+    opacity: 0.80;
+    width: 300px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+.ans_zaitaku_4{
+    background-color:white;
+    color:#333333;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px orange;
+    margin-top: 165vh;
+    position: absolute;
+    top:180px;
+    right: 50px;
+    padding: 0.3em 1em 2em 1em;
+    box-shadow:2px 2px 0 rgba(0,0,0,.1);
+    border-radius: 30px;
+    opacity: 0.80;
+    width: 300px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+
+.ans_zaitaku_sen{
+    background-color: white;
+    background-image:
+    linear-gradient(90deg, white 0%, white 50%, white 0%, white 100%), linear-gradient(180deg, white 0%, white 95%, white 100%);
+    background-size: 8px 100%,100% 2em;
+    line-height: 2em;
+    padding: 2em 1em 0.2em 1em;
 }

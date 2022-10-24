@@ -11,8 +11,8 @@
             
             <div class="note8">
                 <div class="sen8">
-                    Twitterアカウント名 : {{item["display_name"]}}<br>
-                    {{item["sunabaco"]}}<br>
+                    「{{item["display_name"]}}」といいます<br>
+                    {{item["sunabaco"]}}です！<br>
                     {{item["hitokoto_0"]}}<br>
                 </div>
             </div>
@@ -28,27 +28,44 @@
             <section>
                 <div class="area">
                 <div class="situmon_zaitaku">案件（仕事）を見つけた場所はどこですか？？</div>
-                <p>{{item["content_1"]}}</p>
+                <!-- <div class="ans_zaitaku">{{item["content_1"]}}</div> -->
+                <div class="ans_zaitaku_1">
+                    <div class="ans_zaitaku_sen">
+                        {{item["content_1"]}}
+                    </div>
+                </div>
+
+                <p></p>
                 </div>
               <!--/area1--></section>
                 <section>
                 <div class="area">
                 <div class="situmon_zaitaku">案件（仕事）の内容はどんなものでしたか？？</div>
-                <p>{{item["content_2"]}}</p>
-                </div>
+                <div class="ans_zaitaku_2">
+                    <div class="ans_zaitaku_sen">
+                        {{item["content_2"]}}
+                    </div>
+                </div>                </div>
               <!--/area2--></section>
                 <section>
                 <div class="area">
                 <div class="situmon_zaitaku_1">案件（仕事）を自分で取ってきてから、完了させるまでにかかった時間を教えてください！</div>
-
-                <p>{{item["Total_time"]}}</p>
+                <div class="ans_zaitaku_3">
+                    <div class="ans_zaitaku_sen">
+                        {{item["Total_time"]}}
+                    </div>
+                </div>
                 </div>
                 </section>
 
                 <section>
                 <div class="area">
                 <div class="situmon_zaitaku_1">初めての案件（仕事）に取り組んでみた感想をお聞かせください！(楽しかったこと、苦労話など）</div>
-                <p>{{item["content_3"]}}</p>
+                <div class="ans_zaitaku_4">
+                    <div class="ans_zaitaku_sen">
+                        {{item["content_3"]}}
+                    </div>
+                </div>
                 </div>
                 </section>
 {% endfor %} 
