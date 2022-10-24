@@ -18,6 +18,8 @@
             </div>
 
         </div>
+
+
     </div>
     
       
@@ -34,6 +36,7 @@
                         {{item["content_1"]}}
                     </div>
                 </div>
+                <div class="small_img_1"><img src="../static/IMG/old_man.png"></div>
 
                 <p></p>
                 </div>
@@ -45,7 +48,10 @@
                     <div class="ans_zaitaku_sen">
                         {{item["content_2"]}}
                     </div>
-                </div>                </div>
+                </div>   
+                <div class="small_img_2"><img src="../static/IMG/old_man.png"></div>
+            
+                </div>
               <!--/area2--></section>
                 <section>
                 <div class="area">
@@ -55,31 +61,40 @@
                         {{item["Total_time"]}}
                     </div>
                 </div>
+                <div class="small_img_3"><img src="../static/IMG/old_man.png"></div>
+
                 </div>
                 </section>
 
                 <section>
-                <div class="area">
+                <div class="area_1">
                 <div class="situmon_zaitaku_1">初めての案件（仕事）に取り組んでみた感想をお聞かせください！(楽しかったこと、苦労話など）</div>
                 <div class="ans_zaitaku_4">
                     <div class="ans_zaitaku_sen">
                         {{item["content_3"]}}
                     </div>
                 </div>
+                <div class="small_img_4"><img src="../static/IMG/old_man.png"></div>
                 </div>
                 </section>
-{% endfor %} 
-        
 
+                <section>
+                <div class="area">
+                <div class="situmon_zaitaku">報酬金額はおいくらでしたか？？</div>
+                <div class="ans_zaitaku_5">
+                    <div class="ans_zaitaku_sen">
+                        {{item["reward_first"]}}
+                    </div>
+                </div>
+                <div class="small_img_5"><img src="../static/IMG/old_man.png"></div>
+                </div>
+                </section>
+                {% endfor %} 
+                <!-- <a href="/">戻る</a> -->
+                <a href="/zaitaku_list" class="btn btn--orange btn--cubic btn--shadow">もどる</a>
 
-     
-
-
-
-            <a href="/">戻る</a>
-
-            <footer><small>&copy; separate corporation.</small></footer>
-        </section>
+                <footer><small>&copy; separate corporation.</small></footer>
+                </section>
         </body>
     </div>
 </div>
