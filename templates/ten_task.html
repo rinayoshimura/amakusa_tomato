@@ -2,9 +2,9 @@
 
 {% block content %}
    
-<h1 class="title_place">🍅在宅ワークのページ🍅</h1>
+<h1 class="title_place">🍅個人ページ(就職・転職）🍅</h1>
 
-{% for item in amakusa_list %}
+{% for item in ten_task %}
 
 <h3>{{item["display_name"]}}さんのページ</h3>
 <div class ="report">
@@ -18,7 +18,10 @@
             </dt>
             <dd>
                 <div class="arrow_box">
-                    <p><h2>{{item["hitokoto_0"]}}</h2></p>
+                    <p><h2>{{item["hitokoto_ten"]}}</h2></p>
+                    <p><h2>{{item["content_ten1"]}}</h2></p>
+                    <p><h2>{{item["content_ten2"]}}</h2></p>
+                    <p><h2>{{item["content_ten3"]}}</h2></p>
                 </div>
             </dd>
         </table>
@@ -32,4 +35,4 @@
 
 
 
-{% endblock %}
+{% endblock %}()

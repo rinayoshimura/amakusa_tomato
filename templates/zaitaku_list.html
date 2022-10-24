@@ -3,8 +3,9 @@
 {% block content %}
    
 
-<h1 class="title_place">🍅sunabaco in takamatsu🍅</h1>
-<p>takamatsuの卒業生を紹介</p>
+<h1 class="title_place">🍅在宅🍅</h1>
+
+
 {% for item in task_list %}
 
 
@@ -12,15 +13,14 @@
     <dl class ="uvoice">
         <table border="1">
             <dt>
-                
-                <img src="https://static.yosetti.com/assets/img/icon_dummy2/52.jpg" mid="2251582">
+                <img src="{{ user_image }}" mid="2251582">
                 
                 
                 
                 <div><p>{{item["display_name"]}}</p></div>
                 <br>
-                <form action="/task/{{item['id']}}" method="post">
-                    <input type="submit" value="プロフィールを表示">
+                <form action="/zaitaku_task/{{item['id']}}" method="post">
+                    <input type="submit" value="プロフィール">
                 </form>
             </dt>
             <dd>
@@ -33,11 +33,10 @@
 </div>
     
 <form action="/del/{{item['id']}}" method="post">
-    <input type="submit" value="削除" onclick="return check()">
+    <input type="submit" value="削除">
 </form>
 {% endfor %}
 
-<a href="/add">タスク追加ページ</a>
 <a href="/">戻る</a>
 
 
