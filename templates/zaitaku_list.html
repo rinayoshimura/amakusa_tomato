@@ -1,27 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-   
-
+       
 
 <div id="wrapper_2_1">
     <div id="fixed-area_2_1"><!--左固定エリア-->
-
-    
-        <div class="circle">
-            <div class="syasin_2_1" >
-                <img src="../static/IMG/zaitaku_woman.png" width="230" height="280">
+        <div class="circle_2_1_1">
+            <div class="circle_2_1_2">
+                <div class="syasin_2_1" >
+                    <img src="../static/IMG/zaitaku_woman.png" width="230" height="280">
+                </div>
             </div>
         </div>
-        
-
-       
-        
-
     
-    <!--/fixed-area--></div>
+        <h1 class="class_2_1">ふりーらんす</h1>
+    </div>
       
     <div id="container"><!--右エリア-->
+        <body class="white">
+            
+        
         <section>
             {% for item in task_list %}
 
@@ -61,10 +59,11 @@
 
 
 
-    <a href="/">戻る</a>
+            <a href="/">戻る</a>
 
-    <footer><small>&copy; separate corporation.</small></footer>
-      <!--/container-->
+            <footer><small>&copy; separate corporation.</small></footer>
+        </section>
+        </body>
     </div>
 </div>
   
@@ -74,6 +73,5 @@
 
 
 
-
-
+<h2 class="footer_2_1">tomato</h2>
 {% endblock %}
