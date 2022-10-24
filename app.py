@@ -255,4 +255,5 @@ def ten_task(id):
 if __name__ =="__main__":
     #Flaskが持っているアプリを実行する
     app.run(debug=True)
+
 # app.run(port=8888)

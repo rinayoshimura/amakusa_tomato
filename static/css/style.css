@@ -2,7 +2,7 @@
     background-color:white;
     color: rgb(7, 64, 121);
     text-align: center;
-    padding: 5px 5px;
+    position: sticky;
 }
 
 .footer_2_1{
