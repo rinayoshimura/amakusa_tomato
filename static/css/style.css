@@ -1,16 +1,23 @@
 .header{
-    background-color: #078b8b;
+    background-color:white;
+    color: rgb(7, 64, 121);
+    text-align: center;
+    padding:20px 10px;
 }
 
-.footer{
-    background-color: #33a3a3;
+.footer_2_1{
+    background-color:hwb(292 84% 4%);
+    ;
 }
 
-body{
-    background-color: white;
+body .white{
+    background-color:white;
 
 }
 
+body .mizuiro{
+    background-color: #9ef6f6;
+}
 
 .title_place{
     color:rgb(76, 33, 25);
@@ -24,8 +31,8 @@ body{
 
 /* 投稿者間の縦幅 */
 .report {
-    margin-top: 20px;
-    background-color: white;
+    margin-top: 0px;
+    background-color:white;
 }
 
 

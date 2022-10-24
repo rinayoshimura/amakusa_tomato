@@ -139,7 +139,8 @@ def zaitaku_list():
         # seibetu_list.append({"seibetu":row[0]})
         # era_list.append({"era":row[0]})
         # seibetu=seibetu_list
-        if "男性"==seibetu: 
+
+        if "{'seibetu': '男性'}"==seibetu: 
             Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
         else:
             Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
@@ -156,6 +157,8 @@ def zaitaku_list():
     
     #データの中身を確認
     print(task_list)
+    print("-------------------------------------")
+    print(seibetu)
     return render_template("zaitaku_list.html", task_list = task_list,user_image=Flask_Logo)
 
 

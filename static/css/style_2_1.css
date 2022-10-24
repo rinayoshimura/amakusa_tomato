@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1 .class_2_1{
+  font-size:30px;
+}
+
+h2,
+#container p,
+small{
+  margin:0 0 30px 0;
+}
+
+small{
+  display: block;
+  text-align: center;
+}
+/*========= 左固定レイアウトのためのCSS ===============*/
+
+/*左と右を囲う全体のエリア*/
+#wrapper_2_1{
+  position: relative;/*position stickyの基点にするため relativeをかける*/
+    display: flex;/*左エリア、右エリア横並び指定*/
+  flex-wrap: wrap;/*ボックスの折り返し可*/
+}
+
+
+/*左エリア*/
+#fixed-area_2_1{
+  /*左固定記述*/
+    position: -webkit-sticky;/*Safari用*/
+    position: sticky;
+  top:0;
+  /*横半分50%縦を100vhにする*/
+  width: 50%;
+  height: 100vh;
+  /*装飾のためのCSS*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
+  background-color: #9ef6f6;
+  background-size:cover;
+  color:#fff;
+}
+
+.syasin_2_1{
+   
+  /*横半分50%縦を100vhにする*/
+  width: 87%;
+  height: 47vh;
+  /*装飾のためのCSS*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
+ 
+  background-size:cover;
+  color:#fff;
+}
+
+
+
+.circle_2_1_1 {
+    width: 25rem;
+    height: 25rem;
+    border: solid 20px white;
+    border-radius: 50%;
+}
+
+.circle_2_1_2 {
+    width: 30rem;
+    height: 30rem;
+    border: solid 7px #9ef6f6;
+    border-radius: 50%;
+}
+
+
+.class_2_1{
+  padding:5px 10px;
+  border-radius: 10px;
+  color:#9ef6f6;
+  background-color: white;
+}
+/*右エリア*/
+#container{
+  /*横半分50%にする*/
+  width:50%;
+}
+/*右各セクション 装飾のためのCSS*/
+section{
+  min-height: 100vh;
+  padding:30px;
+}
+
+section:nth-of-type(2n){
+/*装飾のためのCSS*/
+  background:#eee;
+}
+
+
