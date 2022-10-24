@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1 .class_2_1{
+  font-size:30px;
+}
+
+/*========= 左固定レイアウトのためのCSS ===============*/
+
+/*左と右を囲う全体のエリア*/
+#wrapper_3_1{
+  position: relative;/*position stickyの基点にするため relativeをかける*/
+    display: flex;/*左エリア、右エリア横並び指定*/
+  flex-wrap: wrap;/*ボックスの折り返し可*/
+}
+
+
+/*左エリア*/
+#fixed-area_3_1{
+  /*左固定記述*/
+  position: -webkit-sticky;/*Safari用*/
+  position: sticky;
+  top:0;
+  /*横半分50%縦を100vhにする*/
+  width: 50%;
+  height: 100vh;
+  /*装飾のためのCSS*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
+  background-color: #9ef6f6;
+  background-size:cover;
+  color:#fff;
+}
+
+.circle_2_3_1{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle_2_3_2{
+    width: 270px;
+    height: 170px;
+    position: absolute;
+    top:450px;
+    right: 100px;
+
+    background-color: #d0d0d8;
+    border-radius: 20%;
+    opacity: 0.9;
+}
+
+.circle_2_3_1 span{
+    color: darkblue;
+    font-size: 30px;
+}
+
+.circle_2_3_1 h2{
+    text-align:center;
+    color: #222121;
+}
+
+.circle_2_3_1 h4{
+    text-align:center;
+    color: #494747;
+}
+
+
+
+.syasin_3_1 img{
+    width: 300px;
+    margin-bottom:10px;
+}
+
+
+
+
+/*右エリア*/
+#container{
+  /*横半分50%にする*/
+  width:50%;
+}
+/*右各セクション 装飾のためのCSS*/
+section{
+  min-height: 100vh;
+  padding:30px;
+}
+
+section:nth-of-type(2n){
+/*装飾のためのCSS*/
+  background:#eee;
+}
+
+/*---------*/
+.note8{
+    background-color: #dfdfdc;
+    color: #4c4a4a;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 5px orange;
+    position: absolute;
+    top:420px;
+    right: 90px;
+    padding: 0.3em 1em 2em 1em;
+    box-shadow:2px 2px 0 rgba(0,0,0,.1);
+    border-radius: 7px;
+  }
+  .sen8{
+    background-color: #dfdfdc;
+    background-image:
+    linear-gradient(90deg, rgba(255, 246, 230, 0) 0%, rgba(255, 246, 230, 0) 50%, #dfdfdc 0%, #dfdfdc 100%), linear-gradient(180deg, rgba(237, 119, 128, 0) 0%, rgba(237, 119, 128, 0) 95%, #2e2e2e 100%);
+    background-size: 8px 100%,100% 2em;
+    line-height: 2em;
+    padding: 2em 1em 0.2em 1em;
+  }
