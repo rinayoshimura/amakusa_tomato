@@ -22,8 +22,9 @@ background-repeat: no-repeat;
     cursor: pointer;
     }
 #box_1{
-    background: linear-gradient(to right, #9ef6f6 50%,  #88d8d8 50%);
-    /* background-color: #9ef6f6; */
+    /* background: linear-gradient(to right, #9ef6f6 50%,  #3f8080 50%); */
+    background-color: #9ef6f6;
+    /* border-left:0.5px solid #000000; 線の設定 */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -126,7 +127,7 @@ li {
 
 
 
-*,
+/* *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
@@ -191,5 +192,5 @@ a.btn--circle:hover {
   color: #fff;
   -webkit-box-shadow: 0 3px 0 #e53b4e;
   box-shadow: 0 3px 0 #e53b4e;
-}
+} */
 
