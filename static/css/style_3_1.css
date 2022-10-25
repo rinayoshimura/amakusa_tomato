@@ -276,7 +276,7 @@ section:nth-of-type(2n){
     margin: 2em 0;
     font-weight: bold;
     border: solid 3px #9ef6f6;
-    margin-top: 2000px;
+    margin-top: 1950px;
     position: absolute;
     top:180px;
     right: 50px;
@@ -330,7 +330,7 @@ section:nth-of-type(2n){
 }
 .small_img_5 img{
   width: 50px;
-  margin-top: 2000px;
+  margin-top: 1950px;
   position: absolute;
   top:160px;
   right: 40px;
