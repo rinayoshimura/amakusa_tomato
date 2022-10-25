@@ -81,8 +81,13 @@ small{
   padding:5px 10px;
   border-radius: 10px;
   color:#9ef6f6;
+  border-bottom:10px solid #e8ff85;
+  /* border-right:7px solid #5d9595; */
   background-color: white;
 }
+
+
+
 /*右エリア*/
 #container{
   /*横半分50%にする*/
@@ -99,4 +104,31 @@ section:nth-of-type(2n){
   background:#eee;
 }
 
+.arrow_box h2{
+  color: rgb(55, 55, 55);
+}
 
+
+/*inputタグのレイアウト*/
+.btn-submit{
+  display: block;
+  padding: 5px 20px;
+  border-radius: 7px;
+  position:relative;
+  left:8px;
+  bottom:20px;
+  border: none;
+
+
+  border-bottom: 6px solid yellow;
+  background-color: #B3E692;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+}
+.btn-submit:hover {
+  margin-top: 3px;
+  background-color: #89b72e;
+}

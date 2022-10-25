@@ -17,6 +17,7 @@
     </div>
       
     <div id="container"><!--右エリア-->
+    
         <body class="white">
 
             <div class="button007">
@@ -24,16 +25,9 @@
                 
             </div>
             <div class="button0070">
-                <a href="/">戻る</a>                
+                <a href="/">もどる</a>                
             </div>
 
-            
-
-            
-            
-
-            
-        
         <section>
             {% for item in task_list %}
 
@@ -48,9 +42,8 @@
                             
                             
                             <div><p>{{item["display_name"]}}</p></div>
-                            <br>
                             <form action="/zaitaku_task/{{item['id']}}" method="post">
-                                <input type="submit" value="プロフィール">
+                                <input type="submit" value="プロフィール" class="btn-submit">
                             </form>
                         </dt>
                         <dd>
@@ -71,6 +64,7 @@
             <footer><small>&copy; separate corporation.</small></footer>
         </section>
         </body>
+        
     </div>
 </div>
   
