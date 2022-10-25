@@ -1,38 +1,100 @@
 {% extends "base.html" %}
 
 {% block content %}
-   
-<h1 class="title_place">🍅個人ページ(就職・転職）🍅</h1>
 
-{% for item in ten_task %}
+{% for item in ten_task%}
 
-<h3>{{item["display_name"]}}さんのページ</h3>
-<div class ="report">
-    <dl class ="uvoice">
-        <table border="1">
-            <dt>
-                <a href="/task">
-                <img src="https://static.yosetti.com/assets/img/icon_dummy2/52.jpg" mid="2251582">
-                </a>
-                <div><p>{{item["display_name"]}}</p></div>
-            </dt>
-            <dd>
-                <div class="arrow_box">
-                    <p><h2>{{item["hitokoto_ten"]}}</h2></p>
-                    <p><h2>{{item["content_ten1"]}}</h2></p>
-                    <p><h2>{{item["content_ten2"]}}</h2></p>
-                    <p><h2>{{item["content_ten3"]}}</h2></p>
+<div id="wrapper_3_1">
+    <div id="fixed-area_3_2"><!--左固定エリア--> 
+        <div class="circle_2_3_1">
+            <div class="syasin_3_1"><img src="../static/IMG/yung_woman.png"></div>
+            
+            <div class="note8">
+                <div class="sen8">
+                    「{{item["display_name"]}}」といいます<br>
+                    {{item["sunabaco"]}}です！<br>
+                    {{item["hitokoto_ten"]}}<br>
                 </div>
-            </dd>
-        </table>
-    </dl>  
-</div>
+            </div>
+
+        </div>
+
+
+    </div>
     
-<form action="/del/{{item['id']}}" method="post">
-    <input type="submit" value="削除" onclick="return check()">
-</form>
-{% endfor %}
+      
+    <div id="container"><!--右エリア-->
+        <body class="white">
+            
+        
+            <section>
+                <div class="area">
+                <div class="situmon_zaitaku_1">SUNABACO受講後の就職先・転職先はどこで見つけたんですか？？</div>
+                <!-- <div class="ans_zaitaku">{{item["content_1"]}}</div> -->
+                <div class="ans_zaitaku_1_1">
+                    <div class="ans_zaitaku_sen_1">
+                        {{item["content_ten1"]}}
+                    </div>
+                </div>
+                <div class="small_img_1_1"><img src="../static/IMG/woman.png"></div>
+
+                <p></p>
+                </div>
+            </section>
+
+            <section>
+                <div class="area">
+                <div class="situmon_zaitaku_1">SUNABACO受講後の就職・転職先ではどのようなお仕事をしていますか？？</div>
+                <div class="ans_zaitaku_2_2">
+                    <div class="ans_zaitaku_sen_1">
+                        {{item["content_ten2"]}}
+                    </div>
+                </div>   
+                <div class="small_img_2_2"><img src="../static/IMG/old_man.png"></div>
+            
+                </div>
+            </section>
+
+            <section>
+                <div class="area_1">
+                <div class="situmon_zaitaku_1">就職・転職した感想をお聞かせください！(楽しかったこと、苦労話など）</div>
+                <div class="ans_zaitaku_3_3">
+                    <div class="ans_zaitaku_sen_1">
+                        {{item["content_ten3"]}}
+                    </div>
+                </div>
+                <div class="small_img_3_3"><img src="../static/IMG/old_man.png"></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="area">
+                <div class="situmon_zaitaku_1">在宅で仕事がしたい、就職・転職がしたい方へ一言お願いします！</div>
+                <div class="ans_zaitaku_4_4">
+                    <div class="ans_zaitaku_sen_1">
+                        {{item["memo_last"]}}
+                    </div>
+                </div>
+                <div class="small_img_4_4"><img src="../static/IMG/old_man.png"></div>
+                </div>
+            </section>
+
+                {% endfor %} 
+            
+                <!-- <a href="/">戻る</a> -->
+                <a href="/ten_list" class="btn btn--orange btn--cubic btn--shadow">もどる</a>
+
+                <footer><small>&copy; separate corporation.</small></footer>
+            
+        </body>
+    </div>
+</div>
+  
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/js/6-4.js"></script>
 
 
 
-{% endblock %}()
+<h2 class="footer_3_2">tomato</h2>
+{% endblock %}

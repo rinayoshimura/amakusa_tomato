@@ -1,13 +1,17 @@
 .header{
     background-color:white;
-    color: rgb(7, 64, 121);
+    color:#9ef6f6;
     text-align: center;
-    padding:20px 10px;
+    position: sticky;
 }
 
 .footer_2_1{
-    background-color:hwb(292 84% 4%);
+    background-color:#9ef6f6;
     ;
+}
+
+.footer_3_2{
+    background-color: #6eb087;
 }
 
 body .white{
