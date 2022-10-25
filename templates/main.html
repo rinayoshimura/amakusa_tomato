@@ -1,25 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <body>
-
 <h1>ここはメインページです！！</h1>
-<div class="wrapper_1">
+<div id="wrapper_1">
 
-    <div class="fixed_area_1"><!--左エリア-->
-       <div class="zaitaku_list_1">
-        <a href="/zaitaku_list" name="在宅"><img src="../static/IMG/zaitaku.png" width="100" height="100">在宅ワーク</a>
-    </div>
+    <div id="box_1">
+      <div class="zaitaku_list_1">
+        <a href="/zaitaku_list" name="在宅"><img src="../static/IMG/zaitaku.png" width="200" height="240"></a>
+        <div class="daimei_1"><h2></h2></div>
+      </div>
 
-
-    <div class="fixed_area_1"><!--右エリア-->
-       <div class="ten_list_1">
-        <a href="/ten_list" name="就職・転職"><img src="../static/IMG/ten.png" width="100" height="100">就職・転職</a>
+      <div class="ten_list_1">
+        <a href="/ten_list" name="就職・転職"><img src="../static/IMG/ten.png" width="130" height="130"></a>
+          <li>
+            <a href="/ten_list" name="就職・転職">転職・就職</a>
+          </li>
+      </div>
     </div>
 
 </div>
+
 <a href="/add" name="add">追加!</a>
 
+<div class="start">
+    <p>おうちでおしごと</p>
+    <div class="top_0"><img src="../static/IMG/zaitaku.png"></div>
+</div>
 </body>
 
 {% endblock %}
