@@ -113,11 +113,13 @@ p {
 
 /* 吹き出し（かっこ部分） */
 .arrow_box{
+    width: 400px;
 	position: relative;
     background-color:#f4fdfd;
     border-radius: 20px;
 	border: 3px solid #9ef6f6;
     padding: 25px;
+    margin-left:40px;
 }
 .arrow_box:after{
 	right: 100%;
@@ -144,6 +146,7 @@ p {
 
 /* 007 */
 .button007 a {
+    
     border: orange 3px solid;
     background: #fbfb46;
     border-radius: 30px;
@@ -154,9 +157,11 @@ p {
     margin: 30px auto;
     max-width: 300px;
     padding: 20px 25px;
-    color: #2d2c2c;
+    color: #454444;
     transition: 0.3s ease-in-out;
-    font-weight: 500;
+    font-weight: 700;
+    text-decoration:none
+    
 }
 /* .button007 a:before {
     content: '';
