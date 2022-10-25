@@ -2,12 +2,20 @@
 
 {% block content %}
 
-{% for item in ten_task%}
+{% for item in ten_task %}
 
 <div id="wrapper_3_1">
     <div id="fixed-area_3_2"><!--左固定エリア--> 
         <div class="circle_2_3_1">
-            <div class="syasin_3_1"><img src="../static/IMG/yung_woman.png"></div>
+            <div class="syasin_3_1">
+                <!-- <img src="../static/IMG/yung_woman.png"> -->
+                <img src="../{{item['Flask_Logo']}}"> 
+                <!-- <img src="../static/IMG/old_woman.png">  -->
+
+
+            </div>
+                 
+
             
             <div class="note8">
                 <div class="sen8">
@@ -39,7 +47,9 @@
                         {{item["content_ten1"]}}
                     </div>
                 </div>
-                <div class="small_img_1_1"><img src="../static/IMG/woman.png"></div>
+                <div class="small_img_1_1">
+                    <img src="../{{item['Flask_Logo']}}"> 
+                </div>
 
                 <p></p>
                 </div>
@@ -53,7 +63,9 @@
                         {{item["content_ten2"]}}
                     </div>
                 </div>   
-                <div class="small_img_2_2"><img src="../static/IMG/old_man.png"></div>
+                <div class="small_img_2_2">
+                    <img src="../{{item['Flask_Logo']}}"> 
+                </div>
             
                 </div>
             </section>
@@ -66,7 +78,9 @@
                         {{item["content_ten3"]}}
                     </div>
                 </div>
-                <div class="small_img_3_3"><img src="../static/IMG/old_man.png"></div>
+                <div class="small_img_3_3">
+                    <img src="../{{item['Flask_Logo']}}"> 
+                </div>
                 </div>
             </section>
 
@@ -78,7 +92,9 @@
                         {{item["memo_last"]}}
                     </div>
                 </div>
-                <div class="small_img_4_4"><img src="../static/IMG/old_man.png"></div>
+                <div class="small_img_4_4">
+                    <img src="../{{item['Flask_Logo']}}"> 
+                </div>
                 </div>
             </section>
 

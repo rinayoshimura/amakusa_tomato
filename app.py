@@ -168,9 +168,11 @@ def zaitaku_list():
     c.close()
     
     #データの中身を確認
-    print(task_list)
+    # print(task_list)
+    # print("-------------------------------------")
+    # print(seibetu)
     print("-------------------------------------")
-    print(seibetu)
+    print(Flask_Logo)
     return render_template("zaitaku_list.html", task_list = task_list)
 
 
@@ -220,6 +222,9 @@ def ten_list():
             
 
         task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_ten":row[3],"seibetu":row[4],"place":row[5],"Flask_Logo":Flask_Logo})
+    
+
+    c.close()
 
     return render_template("ten_list.html", task_list = task_list)
 
@@ -255,13 +260,38 @@ def zaitaku_task(id):
     c.execute("SELECT id,display_name,twitter_id,era,place,hitokoto_0,seibetu,Total_time,sunabaco,reward_first,content_1,content_2,content_3,memo_last FROM users where class_00 = '在宅' AND id =?;",(id,))
     #タスクリストを入れる配列を定義
     zaitaku_task = []
+    seibetu=""
+    era=""
     #繰り返し分
     for row in c.fetchall():
-        zaitaku_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"hitokoto_0":row[5],"seibetu":row[6],"Total_time":row[7],"sunabaco":row[8],"reward_first":row[9],"content_1":row[10],"content_2":row[11],"content_3":row[12],"memo_last":row[13]})
+
+        seibetu=row[6]
+        era=row[3]
+
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+
+        zaitaku_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"hitokoto_0":row[5],"seibetu":row[6],"Total_time":row[7],"sunabaco":row[8],"reward_first":row[9],"content_1":row[10],"content_2":row[11],"content_3":row[12],"memo_last":row[13],"Flask_Logo":Flask_Logo})
     #color.dbとの接続を終了
     c.close()
     #データの中身を確認
-    print(zaitaku_list)
+    print("-------------------------------------")
+    print(Flask_Logo)
+
     return render_template("zaitaku_task.html", zaitaku_task = zaitaku_task)
 
 
@@ -277,13 +307,35 @@ def ten_task(id):
     c.execute("SELECT id,display_name,twitter_id,era,place,seibetu,sunabaco,hitokoto_ten,content_ten1,content_ten2,content_ten3,memo_last FROM users where class_00 = '就職・転職' AND id = ?;",(id,))
     #タスクリストを入れる配列を定義
     ten_task = []
+    seibetu=""
+    era=""
     #繰り返し分
     for row in c.fetchall():
-        ten_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"seibetu":row[5],"sunabaco":row[6],"hitokoto_ten":row[7],"content_ten1":row[8],"content_ten2":row[9],"content_ten3":row[10],"memo_last":row[11]})
+
+        seibetu=row[5]
+        era=row[3]
+
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+
+        ten_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"seibetu":row[5],"sunabaco":row[6],"hitokoto_ten":row[7],"content_ten1":row[8],"content_ten2":row[9],"content_ten3":row[10],"memo_last":row[11],"Flask_Logo":Flask_Logo})
     #color.dbとの接続を終了
     c.close()
     #データの中身を確認
-    print(ten_list)
     return render_template("ten_task.html", ten_task = ten_task)
 
 
