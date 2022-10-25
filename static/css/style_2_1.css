@@ -162,3 +162,31 @@ section:nth-of-type(2n){
   transform: scale(1.2);
   transition-duration: 0.5s;
   }
+
+
+
+
+
+
+
+/*あそび*/
+/* 
+.class_2_1{
+  animation:3s linear infinite rotation1;
+}
+
+@keyframes rotation1{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg); }
+} */
+
+
+.class_2_1{
+  
+  transform-origin:400px 0;
+  animation:3s rotation;
+}
+@keyframes movement{
+  0%{ left:-100px;}
+  200%{ left:100px; }
+}
