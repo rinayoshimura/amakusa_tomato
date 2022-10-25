@@ -230,6 +230,14 @@ def ten_list():
 
 
 
+# @app.route("/del_check/<int:id>",methods=["POST"])
+# def del_check(id):
+
+#     num=(id)
+#     print(num)
+#     return render_template("del_check.html",num=num)
+
+
 
 
 
