@@ -30,7 +30,7 @@ h1 .class_2_1{
   justify-content: center;
   align-items: center;
   /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
-  background-color: #6eb087;
+  background-color: #9ef6dd;
   background-size:cover;
   color:#fff;
 }
@@ -235,11 +235,11 @@ section:nth-of-type(2n){
     text-align: center;
   }
 .ans_zaitaku_3_3{
-    background-color:#6eb087;
+    background-color:#9ef6dd;
     color:#333333;
     margin: 2em 0;
     font-weight: bold;
-    border: solid 3px #6eb087;
+    border: solid 3px #9ef6dd;
     margin-top: 980px;
     position: absolute;
     top:180px;
@@ -253,11 +253,11 @@ section:nth-of-type(2n){
     text-align: center;
   }
 .ans_zaitaku_4_4{
-    background-color:#6eb087;
+    background-color:#9ef6dd;
     color:#333333;
     margin-bottom:300px;
     font-weight: bold;
-    border: solid 3px #6eb087;
+    border: solid 3px #9ef6dd;
     margin-top: 1550px;
     position: absolute;
     top:180px;
@@ -291,9 +291,9 @@ section:nth-of-type(2n){
 
 
 .ans_zaitaku_sen_1{
-    background-color: #6eb087;
+    background-color: #9ef6dd;
     background-image:
-    linear-gradient(90deg, #6eb087 0%, #6eb087 50%, #6eb087 0%, #6eb087 100%), linear-gradient(180deg, #6eb087 0%, #6eb087 95%, #6eb087 100%);
+    linear-gradient(90deg, #9ef6dd 0%, #9ef6dd 50%, #9ef6dd 0%, #9ef6dd 100%), linear-gradient(180deg, #9ef6dd 0%, #9ef6dd 95%, #9ef6dd 100%);
     background-size: 8px 100%,100% 2em;
     line-height: 2em;
     padding: 2em 1em 0.2em 1em;
