@@ -24,7 +24,7 @@ h1 .class_2_1{
   justify-content: center;
   align-items: center;
   /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
-  background-color: #6fffd6;
+  background-color: #9ef6f6;
   background-size:cover;
   color:#fff;
 }
@@ -47,7 +47,7 @@ h1 .class_2_1{
 .circle_2_2_2 {
     width: 30rem;
     height: 30rem;
-    border: solid 7px #6fffd6;
+    border: solid 7px #9ef6f6;
     border-radius: 50%;
 }
 
@@ -55,7 +55,7 @@ h1 .class_2_1{
 .class_2_2{
   padding:5px 10px;
   border-radius: 10px;
-  color: #6fffd6;
+  color: #9ef6f6;
   background-color: white;
 }
 
