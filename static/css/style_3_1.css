@@ -11,7 +11,8 @@ h1 .class_2_1{
 /*左と右を囲う全体のエリア*/
 #wrapper_3_1{
   position: relative;/*position stickyの基点にするため relativeをかける*/
-    display: flex;/*左エリア、右エリア横並び指定*/
+  display: flex;
+  /*左エリア、右エリア横並び指定*/
   flex-wrap: wrap;/*ボックスの折り返し可*/
 }
 
@@ -31,6 +32,7 @@ h1 .class_2_1{
   align-items: center;
   /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
   background-color: #9ef6f6;
+  /* background-color: #141818; */
   background-size:cover;
   color:#fff;
 
@@ -80,28 +82,47 @@ h1 .class_2_1{
 
 
 
-/*右エリア*/
+/*-----------------------------右エリア-------------------------*/
 #container{
   /*横半分50%にする*/
   width:50%;
 }
 /*右各セクション 装飾のためのCSS*/
-section{
-  min-height: 40vh;
-  padding:30px;
-  padding-top: 60px;
+
+
+/* section .area{
+  margin-top:100px 100px;
+} */
+
+
+/* h3{
+  color:#9ef6f6;
+  text-align: center;
+  opacity: 0.9;
+  display: block;
+  padding: 5px 10px;
+  border:yellow 3px solid ;
+} */
+.situ_bl{
+  /* display: block; */
+  /* margin: 0px 0px; */
 }
 
-section .area_1{
+.ans_bl{
+  margin:0 0 0 50%;
+}
+
+/* section .area_1{
   min-height: 60vh;
   padding:0px;
   padding-top: 60px;
-}
+} */
 
 section:nth-of-type(2n){
 /*装飾のためのCSS*/
   background:white;
 }
+
 
 /*---------*/
 .note8{
@@ -111,9 +132,10 @@ section:nth-of-type(2n){
     margin: 2em 0;
     font-weight: bold;
     border: solid 10px orange;
-    position: absolute;
+    /* position: absolute;
     top:470px;
-    right: 90px;
+    right: 90px; */
+    
     padding: 0.3em 1em 2em 1em;
     box-shadow:2px 2px 0 rgba(0,0,0,.1);
     border-radius: 30px;
@@ -133,18 +155,26 @@ section:nth-of-type(2n){
 
 
 /*----------右側吹き出し------------*/
-  .situmon_zaitaku{
-    position:relative;
-    width:270px;
+  .situmon_zaitaku p{  
+    /* position:relative;
+    width:370px;
     height:60px;
     background:#B3E692;
     padding:25px;
     text-align:center;
     color:#333333;
     font-size:20px;
-    border-radius:48px;
+   */
+    background-color:#B3E692;
+    color:#333333;
+    margin: 30px 0;
+    padding: 0.3em 1em 2em 1em;
+    width: 370px;
+    overflow-wrap: break-word;
+    text-align: center;
+    /* border-radius:48px;
     -webkit-border-radius:48px;
-    -moz-border-radius:48px;
+    -moz-border-radius:48px; */
 }
 .situmon_zaitaku:after{
     border: solid transparent;
@@ -202,110 +232,14 @@ section:nth-of-type(2n){
 
 /*回答の吹き出し*/
 
-.ans_zaitaku_1{
+.ans_zaitaku{
     background-color:#9ef6f6;
     color:#333333;
-    margin: 2em 0;
-    font-weight: bold;
-    border: solid 3px #9ef6f6;
-    margin-top: 40px;
-    position: absolute;
-    top:180px;
-    right: 50px;
+    margin: 30px 0;
+    font-weight: bold;    
     padding: 0.3em 1em 2em 1em;
-    box-shadow:2px 2px 0 rgba(0,0,0,.1);
     border-radius: 30px;
-    opacity: 0.80;
-    width: 300px;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
-.ans_zaitaku_2{
-    background-color:#9ef6f6;
-    color:#333333;
-    margin: 2em 0;
-    font-weight: bold;
-    border: solid 3px #9ef6f6;
-    margin-top: 450px;
-    position: absolute;
-    top:180px;
-    right: 50px;
-    padding: 0.3em 1em 2em 1em;
-    box-shadow:2px 2px 0 rgba(0,0,0,.1);
-    border-radius: 30px;
-    opacity: 0.80;
-    width: 300px;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
-.ans_zaitaku_3{
-    background-color:#9ef6f6;
-    color:#333333;
-    margin: 2em 0;
-    font-weight: bold;
-    border: solid 3px #9ef6f6;
-    margin-top: 900px;
-    position: absolute;
-    top:180px;
-    right: 50px;
-    padding: 0.3em 1em 2em 1em;
-    box-shadow:2px 2px 0 rgba(0,0,0,.1);
-    border-radius: 30px;
-    opacity: 0.80;
-    width: 300px;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
-.ans_zaitaku_4{
-    background-color:#9ef6f6;
-    color:#333333;
-    margin: 2em 0;
-    font-weight: bold;
-    border: solid 3px #9ef6f6;
-    margin-top: 1400px;
-    position: absolute;
-    top:180px;
-    right: 50px;
-    padding: 0.3em 1em 2em 1em;
-    box-shadow:2px 2px 0 rgba(0,0,0,.1);
-    border-radius: 30px;
-    opacity: 0.80;
-    width: 300px;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
-.ans_zaitaku_5{
-    background-color:#9ef6f6;
-    color:#333333;
-    margin: 2em 0;
-    font-weight: bold;
-    border: solid 3px #9ef6f6;
-    margin-top: 1900px;
-    position: absolute;
-    top:180px;
-    right: 50px;
-    padding: 0.3em 1em 2em 1em;
-    box-shadow:2px 2px 0 rgba(0,0,0,.1);
-    border-radius: 30px;
-    opacity: 0.80;
-    width: 300px;
-    overflow-wrap: break-word;
-    text-align: center;
-  }
-.ans_zaitaku_6{
-    background-color:#9ef6f6;
-    color:#333333;
-    margin: 2em 0;
-    font-weight: bold;
-    border: solid 3px #9ef6f6;
-    margin-top: 2300px;
-    position: absolute;
-    top:180px;
-    right: 50px;
-    padding: 0.3em 1em 2em 1em;
-    box-shadow:2px 2px 0 rgba(0,0,0,.1);
-    border-radius: 30px;
-    opacity: 0.80;
+    opacity: 0.90;
     width: 300px;
     overflow-wrap: break-word;
     text-align: center;
@@ -314,55 +248,59 @@ section:nth-of-type(2n){
 
 .ans_zaitaku_sen{
     background-color: #9ef6f6;
-    background-image:
-    linear-gradient(90deg, #9ef6f6 0%, #9ef6f6 50%, #9ef6f6 0%, #9ef6f6 100%), linear-gradient(180deg, #9ef6f6 0%, #9ef6f6 95%, #9ef6f6 100%);
     background-size: 8px 100%,100% 2em;
     line-height: 2em;
     padding: 2em 1em 0.2em 1em;
 }
 
+    /* background-image:linear-gradient(90deg, #9ef6f6 0%, #9ef6f6 50%, #9ef6f6 0%, #9ef6f6 100%), linear-gradient(180deg, #9ef6f6 0%, #9ef6f6 95%, #9ef6f6 100%); */
 
-.small_img_1 img{
+
+.small_img img{
   width: 50px;
-  margin-top: 40px;
+  display: block;
+  margin:0 0 0 90%;
+  /* height: 100px; */
+  
+  /* margin-top: 40px;
   position: absolute;
   top:160px;
-  right: 40px;
+  right: 40px; */
 }
 .small_img_2 img{
   width: 50px;
-  margin-top: 450px;
+  /* margin-top: 450px;
   position: absolute;
   top:160px;
-  right: 40px;
+  right: 40px; */
 }
 .small_img_3 img{
   width: 50px;
-  margin-top: 900px;
+  /* margin-top: 900px;
   position: absolute;
   top:160px;
-  right: 40px;
+  right: 40px; */
 }
 .small_img_4 img{
   width: 50px;
-  margin-top: 1400px;
+  /* margin-top: 1400px;
   position: absolute;
   top:160px;
-  right: 40px;
+  right: 40px; */
 }
 .small_img_5 img{
   width: 50px;
-  margin-top: 1900px;
+  /* margin-top: 1900px;
   position: absolute;
   top:160px;
-  right: 40px;
+  right: 40px; */
 }
 .small_img_6 img{
   width: 50px;
-  margin-top: 2300px;
+  /* margin-top: 2300px;
   position: absolute;
   top:160px;
-  right: 40px;
+  right: 40px; */
 }
 
 
@@ -385,3 +323,5 @@ a.btn--shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
+
+

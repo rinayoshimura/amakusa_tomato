@@ -8,6 +8,10 @@ background-size: cover;
 background-repeat: no-repeat;
 }
 
+.top_class{
+  height: 40vh;
+}
+
 #wrapper_1{
     /* position: relative;
     display: flex; */
@@ -19,27 +23,28 @@ background-repeat: no-repeat;
     }
     
 #box_1{
+  margin-top: 20px;
     background: linear-gradient(to right, #9ef6f6 50%, #9ef6f6 50%);
     display: flex;
     align-items: center;
     justify-content: space-around;
     top:0;
     width:100%;
-    height: 100vh;
+    height: 70vh;
 }
 
 .zaitaku_list_1 {
     position:absolute;
     padding:  20px;             
     left:  60px;              
-    top: 400px;
+    top: 350px;
 }
 
 .ten_list_1 {
     position: absolute;        
     padding:  20px;             
     right:  60px;                
-    top: 400px;
+    top: 350px;
     /* line-height: 8; */
 }
 
@@ -110,27 +115,35 @@ background-repeat: no-repeat;
 
 .message_top{
   
-  background-color: #9ef6f6;
+  background-color: white;
   /* margin-bottom: 5px; */
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
   font-size:  20px;
-  height: 300px;
+  /* height: 300px; */
 }
 
 .message_top h1{
   color: whitesmoke;
   text-align: right;
+  /* border-bottom: white 25px solid; */
+  /* border-bottom: yellow 25px solid; */
+
+  background-color: #B3E692;
+  margin:0 0 0 0;
 }
 
-.message_top h2{
+/* .message_top h2{
   color: whitesmoke;
   text-align: center;
+  background-color: #fdcf7a;
+  padding:10px auto;
+  margin: 0 0 0 0;
+} */
+
+span {
+  color: rgb(243, 146, 77);
 }
-
-
-
-
 
 
 
