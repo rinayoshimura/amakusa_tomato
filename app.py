@@ -22,28 +22,6 @@ app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 def main():
     return render_template("main.html")
 
-# @app.route("/amakusa_list")
-# def list1():
-#     return render_template("amakusa_list.html")
-# @app.route("/yatushiro_list")
-# def list2():
-#     return render_template("yatushiro_list.html")
-# @app.route("/fukuoka_list")
-# def list3():
-#     return render_template("fukuoka_list.html")
-# @app.route("/takamatsu_list")
-# def list4():
-#     return render_template("takamatsu_list.html")
-# @app.route("/idoba_list")
-# def list5():
-#     return render_template("idaba_list.html")
-# @app.route("/ebetsu_list")
-# def list6():
-#     return render_template("ebetsu_list.html")
-# @app.route("/koza_list")
-# def list7():
-#     return render_template("koza_list.html")
-
 
 
 
@@ -162,15 +140,8 @@ def zaitaku_list():
 
         task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_0":row[3],"seibetu":row[4],"place":row[5],"Flask_Logo":Flask_Logo})
 
-
-    #------------------------------------------  
     #color.dbとの接続を終了
     c.close()
-    
-    #データの中身を確認
-    # print(task_list)
-    # print("-------------------------------------")
-    # print(seibetu)
     print("-------------------------------------")
     print(Flask_Logo)
     return render_template("zaitaku_list.html", task_list = task_list)
@@ -345,6 +316,147 @@ def ten_task(id):
     c.close()
     #データの中身を確認
     return render_template("ten_task.html", ten_task = ten_task)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#表示機能(詳細検索)
+@app.route("/zaitaku_detail",methods = ["POST"])
+def zaitaku_detail():
+
+    place=request.form.get("place")
+    # sunabaco=request.form.get("sunabaco")
+
+    #「sqlite3でcolor.dbに接続してね」ということをconnに代入
+    conn = sqlite3.connect("try.db")
+    #「sqlite3で接続したものを操作してね」ということをcに代入
+    c = conn.cursor()
+    #()内のSQL文を実行
+
+    c.execute("SELECT id,display_name,era,hitokoto_0,seibetu,place FROM users where class_00 = '在宅' AND place =?;",(place,))
+
+    # c.execute("SELECT seibetu,era FROM users WHERE class_00 = '在宅';")
+    task_list = []
+    seibetu = ""
+    era=""
+    # era_list=[]
+    for row in c.fetchall():
+        
+        seibetu=row[4]
+        era=row[2]
+        #taskの作成----------追加したところーーーーーー
+        
+        # seibetu_list.append({"seibetu":row[0]})
+        # era_list.append({"era":row[0]})
+        # seibetu=seibetu_list
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+            
+
+        task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_0":row[3],"seibetu":row[4],"place":row[5],"Flask_Logo":Flask_Logo})
+
+    #color.dbとの接続を終了
+    c.close()
+    # print("-------------------------------------")
+    # print(Flask_Logo)
+    return render_template("zaitaku_list.html", task_list = task_list)
+
+
+
+
+#表示機能(就職・転職)
+@app.route("/ten_detail",methods = ["POST"])
+def ten_detail():
+
+    place=request.form.get("place")
+    #「sqlite3でcolor.dbに接続してね」ということをconnに代入
+    conn = sqlite3.connect("try.db")
+    #「sqlite3で接続したものを操作してね」ということをcに代入
+    c = conn.cursor()
+    #()内のSQL文を実行
+    c.execute("SELECT id,display_name,era,hitokoto_ten,seibetu,place FROM users where class_00 = '就職・転職' AND place = ?;",(place,))
+    #タスクリストを入れる配列を定義
+    task_list = []
+    seibetu = ""
+    era=""
+    # era_list=[]
+    for row in c.fetchall():
+        
+        seibetu=row[4]
+        era=row[2]
+        #taskの作成----------追加したところーーーーーー
+        
+        # seibetu_list.append({"seibetu":row[0]})
+        # era_list.append({"era":row[0]})
+        # seibetu=seibetu_list
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+            
+
+        task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_ten":row[3],"seibetu":row[4],"place":row[5],"Flask_Logo":Flask_Logo})
+    
+
+    c.close()
+
+    return render_template("ten_list.html", task_list = task_list)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

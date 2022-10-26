@@ -23,9 +23,37 @@
         <body class="white">
 
             <div class="button007">
-                <a href="/add">あなたの情報も教えてください！</a>
+                <a href="/add">入力フォームに移動</a>
                 
             </div>
+
+            <div class="detail">
+            <form action="/zaitaku_detail" method="post">
+                <p>受講会場で探す<br>
+                    <select name="place">
+                    <option value="">選択されていません</option>
+                    <option value="AMAKUSA">AMAKUSA</option>
+                    <option value="YATUSHIRO">YATUSHIRO</option>
+                    <option value="FUKUOKA">FUKUOKA</option>
+                    <option value="TAKAMATSU">TAKAMATSU</option>
+                    <option value="IDOBA">IDOBA</option>
+                    <option value="EBETSU">EBETSU</option>
+                    <option value="KOZA">KOZA</option>
+                    <option value="ONLINE">ONLINE</option>
+                    </select>
+                </p>
+
+                <!-- <p>SUNABACO受講経験の有無<br>
+                    <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">あり
+                    <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">なし
+                </p> -->
+
+
+                <input type="submit" name="save" value="検索">
+            </form>
+            </div>
+
+
             <div class="button0070">
                 <a href="/">もどる</a>                
             </div>
