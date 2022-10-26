@@ -33,6 +33,7 @@ h1 .class_2_1{
   background-color: #9ef6f6;
   background-size:cover;
   color:#fff;
+
 }
 
 .circle_2_3_1{
@@ -276,7 +277,25 @@ section:nth-of-type(2n){
     margin: 2em 0;
     font-weight: bold;
     border: solid 3px #9ef6f6;
-    margin-top: 1950px;
+    margin-top: 1900px;
+    position: absolute;
+    top:180px;
+    right: 50px;
+    padding: 0.3em 1em 2em 1em;
+    box-shadow:2px 2px 0 rgba(0,0,0,.1);
+    border-radius: 30px;
+    opacity: 0.80;
+    width: 300px;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+.ans_zaitaku_6{
+    background-color:#9ef6f6;
+    color:#333333;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px #9ef6f6;
+    margin-top: 2300px;
     position: absolute;
     top:180px;
     right: 50px;
@@ -330,7 +349,14 @@ section:nth-of-type(2n){
 }
 .small_img_5 img{
   width: 50px;
-  margin-top: 1950px;
+  margin-top: 1900px;
+  position: absolute;
+  top:160px;
+  right: 40px;
+}
+.small_img_6 img{
+  width: 50px;
+  margin-top: 2300px;
   position: absolute;
   top:160px;
   right: 40px;
@@ -356,4 +382,3 @@ a.btn--shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
-

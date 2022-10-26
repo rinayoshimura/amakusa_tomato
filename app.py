@@ -1,5 +1,6 @@
 #flaskをインポート
 # from crypt import methods
+from ast import And
 from operator import truediv
 from ssl import HAS_TLSv1_1
 from time import time
@@ -129,37 +130,50 @@ def zaitaku_list():
     c.execute("SELECT id,display_name,era,hitokoto_0,seibetu,place FROM users where class_00 = '在宅';")
     # c.execute("SELECT seibetu,era FROM users WHERE class_00 = '在宅';")
     task_list = []
-    seibetu = []
+    seibetu = ""
+    era=""
     # era_list=[]
     for row in c.fetchall():
-        task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_0":row[3],"seibetu":row[4],"place":row[5]})
-        seibetu.append({"seibetu":row[4]})
+        
+        seibetu=row[4]
+        era=row[2]
         #taskの作成----------追加したところーーーーーー
         
         # seibetu_list.append({"seibetu":row[0]})
         # era_list.append({"era":row[0]})
         # seibetu=seibetu_list
 
-        if "{'seibetu': '男性'}"==seibetu: 
-            Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
         else:
-            Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
-        
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+            
 
-   
+        task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_0":row[3],"seibetu":row[4],"place":row[5],"Flask_Logo":Flask_Logo})
 
-        
-    
 
     #------------------------------------------  
     #color.dbとの接続を終了
     c.close()
     
     #データの中身を確認
-    print(task_list)
+    # print(task_list)
+    # print("-------------------------------------")
+    # print(seibetu)
     print("-------------------------------------")
-    print(seibetu)
-    return render_template("zaitaku_list.html", task_list = task_list,user_image=Flask_Logo)
+    print(Flask_Logo)
+    return render_template("zaitaku_list.html", task_list = task_list)
 
 
 
@@ -177,15 +191,51 @@ def ten_list():
     c.execute("SELECT id,display_name,era,hitokoto_ten,seibetu,place FROM users where class_00 = '就職・転職';")
     #タスクリストを入れる配列を定義
     task_list = []
-    #繰り返し分
+    seibetu = ""
+    era=""
+    # era_list=[]
     for row in c.fetchall():
-        task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_ten":row[3],"seibetu":row[4],"place":row[5]})
-    #color.dbとの接続を終了
+        
+        seibetu=row[4]
+        era=row[2]
+        #taskの作成----------追加したところーーーーーー
+        
+        # seibetu_list.append({"seibetu":row[0]})
+        # era_list.append({"era":row[0]})
+        # seibetu=seibetu_list
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+            
+
+        task_list.append({"id":row[0],"display_name":row[1],"era":row[2],"hitokoto_ten":row[3],"seibetu":row[4],"place":row[5],"Flask_Logo":Flask_Logo})
+    
+
     c.close()
-    #データの中身を確認
-    print(task_list)
+
     return render_template("ten_list.html", task_list = task_list)
 
+
+
+# @app.route("/del_check/<int:id>",methods=["POST"])
+# def del_check(id):
+
+#     num=(id)
+#     print(num)
+#     return render_template("del_check.html",num=num)
 
 
 
@@ -218,13 +268,38 @@ def zaitaku_task(id):
     c.execute("SELECT id,display_name,twitter_id,era,place,hitokoto_0,seibetu,Total_time,sunabaco,reward_first,content_1,content_2,content_3,memo_last FROM users where class_00 = '在宅' AND id =?;",(id,))
     #タスクリストを入れる配列を定義
     zaitaku_task = []
+    seibetu=""
+    era=""
     #繰り返し分
     for row in c.fetchall():
-        zaitaku_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"hitokoto_0":row[5],"seibetu":row[6],"Total_time":row[7],"sunabaco":row[8],"reward_first":row[9],"content_1":row[10],"content_2":row[11],"content_3":row[12],"memo_last":row[13]})
+
+        seibetu=row[6]
+        era=row[3]
+
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+
+        zaitaku_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"hitokoto_0":row[5],"seibetu":row[6],"Total_time":row[7],"sunabaco":row[8],"reward_first":row[9],"content_1":row[10],"content_2":row[11],"content_3":row[12],"memo_last":row[13],"Flask_Logo":Flask_Logo})
     #color.dbとの接続を終了
     c.close()
     #データの中身を確認
-    print(zaitaku_list)
+    print("-------------------------------------")
+    print(Flask_Logo)
+
     return render_template("zaitaku_task.html", zaitaku_task = zaitaku_task)
 
 
@@ -240,13 +315,35 @@ def ten_task(id):
     c.execute("SELECT id,display_name,twitter_id,era,place,seibetu,sunabaco,hitokoto_ten,content_ten1,content_ten2,content_ten3,memo_last FROM users where class_00 = '就職・転職' AND id = ?;",(id,))
     #タスクリストを入れる配列を定義
     ten_task = []
+    seibetu=""
+    era=""
     #繰り返し分
     for row in c.fetchall():
-        ten_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"seibetu":row[5],"sunabaco":row[6],"hitokoto_ten":row[7],"content_ten1":row[8],"content_ten2":row[9],"content_ten3":row[10],"memo_last":row[11]})
+
+        seibetu=row[5]
+        era=row[3]
+
+
+        if "男性"==seibetu:  
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_man.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'man.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_man.png')
+
+        else:
+            if "10代〜20代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'yung_woman.png')
+            elif "30代〜40代"==era:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'woman.png')
+            else:
+                Flask_Logo = os.path.join(app.config['UPLOAD_FOLDER'], 'old_woman.png')
+
+        ten_task.append({"id":row[0],"display_name":row[1],"twitter_id":row[2],"era":row[3],"place":row[4],"seibetu":row[5],"sunabaco":row[6],"hitokoto_ten":row[7],"content_ten1":row[8],"content_ten2":row[9],"content_ten3":row[10],"memo_last":row[11],"Flask_Logo":Flask_Logo})
     #color.dbとの接続を終了
     c.close()
     #データの中身を確認
-    print(ten_list)
     return render_template("ten_task.html", ten_task = ten_task)
 
 

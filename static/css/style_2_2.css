@@ -32,7 +32,7 @@ h1 .class_2_1{
 .syasin_2_1{
    
   /*横半分50%縦を100vhにする*/
-  width: 87%;
+  width: 83%;
   height: 47vh;
   /*装飾のためのCSS*/
   display: flex;
@@ -56,6 +56,7 @@ h1 .class_2_1{
   padding:5px 10px;
   border-radius: 10px;
   color: #9ef6f6;
+  border-bottom:10px solid #e8ff85;
   background-color: white;
 }
 

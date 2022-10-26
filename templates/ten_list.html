@@ -8,7 +8,9 @@
         <div class="circle_2_1_1">
             <div class="circle_2_2_2">
                 <div class="syasin_2_1" >
+                    <div class="image_mouseover_2">
                     <img src="../static/IMG/ten.png" width="320" height="280">
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,14 +38,14 @@
                     <table border="1">
                         <dt>
                             <!-- <img src="{{ user_image }}" mid="2251582"> -->
-                            <img src="https://static.yosetti.com/assets/img/icon_dummy2/52.jpg" mid="2251582">
+                            <img src="{{item['Flask_Logo']}}" mid="2251582">
                             
                             
                             
                             <div><p>{{item["display_name"]}}</p></div>
                             <br>
                             <form action="/ten_task/{{item['id']}}" method="post">
-                                <input type="submit" value="プロフィール">
+                                <input type="submit" value="プロフィール" class="btn-submit">
                             </form>
                         </dt>
                         <dd>
@@ -55,9 +57,7 @@
                 </dl>  
             </div>
                 
-            <form action="/del/{{item['id']}}" method="post">
-                <input type="submit" value="削除">
-            </form>
+            
             {% endfor %}
 
             <footer><small>&copy; separate corporation.</small></footer>

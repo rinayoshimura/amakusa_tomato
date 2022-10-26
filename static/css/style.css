@@ -14,7 +14,8 @@
     background-color: #6eb087;
 }
 
-body .white{
+body{
+    font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     background-color:white;
 
 }
@@ -112,11 +113,13 @@ p {
 
 /* 吹き出し（かっこ部分） */
 .arrow_box{
+    width: 400px;
 	position: relative;
-    background-color: #e2e2e3f3;
-    border-radius: 40px;
-	border: 3px solid #181f1f;
+    background-color:#f4fdfd;
+    border-radius: 20px;
+	border: 3px solid #9ef6f6;
     padding: 25px;
+    margin-left:40px;
 }
 .arrow_box:after{
 	right: 100%;
@@ -143,20 +146,24 @@ p {
 
 /* 007 */
 .button007 a {
+    
+    border: orange 3px solid;
     background: #fbfb46;
     border-radius: 30px;
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 30px;
+    margin: 30px auto;
     max-width: 300px;
     padding: 20px 25px;
-    color: #2d2c2c;
+    color: #454444;
     transition: 0.3s ease-in-out;
-    font-weight: 500;
+    font-weight: 700;
+    text-decoration:none
+    
 }
-.button007 a:before {
+/* .button007 a:before {
     content: '';
     position: absolute;
     top: calc(50% - 2px);
@@ -177,7 +184,7 @@ p {
     height: 2px;
     background-color: #6bb6ff;
     transition: 0.3s;
-}
+} */
 .button007 a:hover:before, .button007 a:hover:after {
     right: -0.5em;
 }
@@ -187,30 +194,32 @@ p {
 }
 
 /* 0070 */
-.button0070 a {
-    background: orange;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+.button0070 a{
+    font-size: 15px;
+    border: 1px solid black;
+    background: #9ef6f6;
+    border-radius: 30%;
+    width: 50px;
+    height: 20px;
     position: relative;
     display: flex;
     position: absolute;
-    top:70px;
-    right: 30px;
+    top:72px;
+    right: 10px;
     position: fixed;
     justify-content: space-around;
     align-items: center;
     margin: 30px;
     max-width: 100px;
-    padding: 20px 25px;
+    padding: 15px 20px;
     color: #161515;
     transition: 0.3s ease-in-out;
     font-weight: 500;
     z-index: 100;
-    opacity: 0.92;
-    font-size: small;
+    opacity: 0.82;
 }
-.button0070 a:before {
+
+/* .button0070 a:before {
     content: '';
     position: absolute;
     top: calc(50% - 2px);
@@ -234,8 +243,10 @@ p {
 }
 .button0070 a:hover:before, .button0070 a:hover:after {
     right: -0.5em;
+} */
+
+.button0070 a:hover{
+    background: orange;
+    color: #2d2c2c;
 }
-.button0070 a:hover {
-    background: #edf6ff;
-    color: #6bb6ff;
-}
+
