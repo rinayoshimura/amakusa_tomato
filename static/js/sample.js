@@ -20,16 +20,27 @@ $(function() {
 // 確認ボタン付きのダイアログボックスを表示して結果を得る
 // ------------------------------------------------------------
 function check(){
-    var result = confirm( "完全削除？" );
+    
+	var result_1 = prompt("パスワードを入力してください");	
 
-    if(result){
-	    console.log(" OK ");
-        return true;
+	password_tomato="1028"
+	
+	if(password_tomato==result_1){
+		var result = confirm( "完全削除に削除しますか？" );
+		if(result){
+			console.log(" OK ");
+			return true;
+	
+		}else{
+			console.log(" CANCEL ");
+			return false;
+		}
 
-    }else{
-	    console.log(" CANCEL ");
-        return false;
-    }
+	}else{
+		var result = confirm( "パスワードが違います" );
+		return false;
+	}
+    
 }tr
 
 
