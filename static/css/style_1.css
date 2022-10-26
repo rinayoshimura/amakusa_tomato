@@ -141,7 +141,9 @@ background-repeat: no-repeat;
   margin: 0 0 0 0;
 } */
 
-
+span {
+  color: rgb(243, 146, 77);
+}
 
 
 

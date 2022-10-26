@@ -22,8 +22,11 @@
             <div class="note8">
                 <div class="sen8">
                     「{{item["display_name"]}}」といいます<br>
-                    {{item["sunabaco"]}}です！<br>
                     {{item["hitokoto_ten"]}}<br>
+                    {{item["sunabaco"]}}で、場所は{{item["place"]}}です!<br>
+                    TwitterのID:{{item["twitter_id"]}}<br>
+                    
+
                 </div>
             </div>
 
@@ -44,64 +47,72 @@
                 <div class="area">
                 <div class="situmon_zaitaku_1">SUNABACO受講後の就職先・転職先はどこで見つけたんですか？？</div>
                 <!-- <div class="ans_zaitaku">{{item["content_1"]}}</div> -->
-                <div class="ans_zaitaku_1_1">
-                    <div class="ans_zaitaku_sen_1">
+                <div class="ans_bl">
+                <div class="ans_zaitaku">
+                    <div class="ans_zaitaku_sen">
                         {{item["content_ten1"]}}
                     </div>
                 </div>
-                <div class="small_img_1_1">
+                <div class="small_img">
                     <img src="../{{item['Flask_Logo']}}"> 
                 </div>
+                </div>
 
-                <p></p>
+                
                 </div>
             </section>
 
             <section>
                 <div class="area">
                 <div class="situmon_zaitaku_1">SUNABACO受講後の就職・転職先ではどのようなお仕事をしていますか？？</div>
-                <div class="ans_zaitaku_2_2">
-                    <div class="ans_zaitaku_sen_1">
+                <div class="ans_bl">
+                <div class="ans_zaitaku">
+                    <div class="ans_zaitaku_sen">
                         {{item["content_ten2"]}}
                     </div>
                 </div>   
-                <div class="small_img_2_2">
+                <div class="small_img">
                     <img src="../{{item['Flask_Logo']}}"> 
+                </div>
                 </div>
             
                 </div>
             </section>
 
             <section>
-                <div class="area_1">
+                <div class="area">
                 <div class="situmon_zaitaku_1">就職・転職した感想をお聞かせください！(楽しかったこと、苦労話など）</div>
-                <div class="ans_zaitaku_3_3">
-                    <div class="ans_zaitaku_sen_1">
+                <div class="ans_bl">
+                <div class="ans_zaitaku">
+                    <div class="ans_zaitaku_sen">
                         {{item["content_ten3"]}}
                     </div>
                 </div>
-                <div class="small_img_3_3">
+                <div class="small_img">
                     <img src="../{{item['Flask_Logo']}}"> 
+                </div>
                 </div>
                 </div>
             </section>
 
             <section>
                 <div class="area">
-                <div class="situmon_zaitaku_1">在宅で仕事がしたい、就職・転職がしたい方へ一言お願いします！</div>
-                <div class="ans_zaitaku_4_4">
-                    <div class="ans_zaitaku_sen_1">
+                <div class="situmon_zaitaku_1">在宅で仕事がしたい、就職・転職がしたい方へ、アドバイスをお願いします！</div>
+                <div class="ans_bl">
+                <div class="ans_zaitaku">
+                    <div class="ans_zaitaku_sen">
                         {{item["memo_last"]}}
                     </div>
                 </div>
-                <div class="small_img_4_4">
+                <div class="small_img">
                     <img src="../{{item['Flask_Logo']}}"> 
                 </div>
                 </div>
+                </div>
             </section>
-            <section>
-                <div class="area"></div>
-            </section>
+            
+
+
             <form action="/del/{{item['id']}}" method="post">
                 <input type="submit" value="削除" onclick="return check()">
             </form>
@@ -120,5 +131,5 @@
 
 
 
-<h2 class="footer_3_2">tomato</h2>
+<h2 class="footer_2_1">tomato</h2>
 {% endblock %}
