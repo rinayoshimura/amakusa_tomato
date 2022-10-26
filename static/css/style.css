@@ -203,9 +203,11 @@ p {
     height: 20px;
     /* position: relative; */
     /* display: flex; */
-    position: absolute;
-    top:700px;
-    left: 10px;
+    position: relative;
+    /* top:660px;
+    right: 30px; */
+    top:80%;
+    right: 3%;
     position: fixed;
     justify-content: space-around;
     align-items: center;
