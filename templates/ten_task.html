@@ -103,7 +103,7 @@
                 <div class="area"></div>
             </section>
             <form action="/del/{{item['id']}}" method="post">
-                <input type="submit" value="削除">
+                <input type="submit" value="削除" onclick="return check()">
             </form>
 
                 {% endfor %} 

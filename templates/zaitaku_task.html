@@ -15,23 +15,21 @@
 
             </div>
             
-            <div class="note8">
-                <div class="sen8">
-                    「{{item["display_name"]}}」といいます<br>
-                    {{item["hitokoto_0"]}}<br>
-                    {{item["sunabaco"]}}です！<br>
-                    受講場所は{{item["place"]}}です<br>
-
-                </div>
-            </div>
-
-
-
-
             <!-- <form action="/del/{{item['id']}}" method="post">
                 <input type="submit" value="削除">
             </form> -->
 
+        </div>
+
+        <div class="note8">
+            <div class="sen8">
+                「{{item["display_name"]}}」といいます<br>
+                {{item["hitokoto_0"]}}<br>
+                {{item["sunabaco"]}}です！<br>
+                受講場所は{{item["place"]}}です<br>
+                TwitterのID:{{item["twitter_id"]}}
+
+            </div>
         </div>
 
 
@@ -41,100 +39,128 @@
     <div id="container"><!--右エリア-->
         <body class="white">
             <div class="button0070">
-                <a href="/zaitaku_list">戻る</a>                
+                <a href="/zaitaku_list">もどる</a>                
             </div>
 
-            <section>
-                <div class="area">
+
+            <!-- <h3>人生で一番最初の案件（仕事）記録</h3> -->
+
+
+
+
+            
+
+
+
+                <section>
+                <!-- <div class="area"> -->
+                
+                <div class="situ_bl">
                 <div class="situmon_zaitaku">案件（仕事）を見つけた場所はどこですか？</div>
-                <!-- <div class="ans_zaitaku">{{item["content_1"]}}</div> -->
-                <div class="ans_zaitaku_1">
-                    <div class="ans_zaitaku_sen">
-                        {{item["content_1"]}}
-                    </div>
                 </div>
-                <div class="small_img_1">
-                    <img src="../{{item['Flask_Logo']}}"> 
+
+                <div class="ans_bl">
+                <div class="ans_zaitaku"><div class="ans_zaitaku_sen"> {{item["content_1"]}}</div></div>
+                <div class="small_img"><img src="../{{item['Flask_Logo']}}"></div>
                 </div>
-                <p></p>
-                </div>
-              <!--/area1--></section>
+
+                <!-- </div> -->
+                </section>
+
+
+
+
                 <section>
                 <div class="area">
+
+                <div class="situ_bl">
                 <div class="situmon_zaitaku">案件（仕事）の内容はどんなものでしたか？？</div>
-                <div class="ans_zaitaku_2">
-                    <div class="ans_zaitaku_sen">
-                        {{item["content_2"]}}
-                    </div>
-                </div>   
-                <div class="small_img_2">
-                    <img src="../{{item['Flask_Logo']}}"> 
+                </div>
+
+                <div class="ans_bl">
+                <div class="ans_zaitaku"><div class="ans_zaitaku_sen">{{item["content_2"]}}</div></div>  
+                <div class="small_img"><img src="../{{item['Flask_Logo']}}"> </div>
                 </div>
             
                 </div>
-              <!--/area2--></section>
-                <section>
-                <div class="area">
-                <div class="situmon_zaitaku_1">案件（仕事）を自分で取ってきてから、完了させるまでにかかった時間を教えてください！</div>
-                <div class="ans_zaitaku_3">
-                    <div class="ans_zaitaku_sen">
-                        {{item["Total_time"]}}
-                    </div>
-                </div>
-                <div class="small_img_3">
-                    <img src="../{{item['Flask_Logo']}}"> 
-                </div>
-
-                </div>
                 </section>
 
-                <section>
-                <div class="area_1">
-                <div class="situmon_zaitaku_1">初めての案件（仕事）に取り組んでみた感想をお聞かせください！(楽しかったこと、苦労話など）</div>
-                <div class="ans_zaitaku_4">
-                    <div class="ans_zaitaku_sen">
-                        {{item["content_3"]}}
-                    </div>
-                </div>
-                <div class="small_img_4">
-                    <img src="../{{item['Flask_Logo']}}"> 
-                </div>
-                </div>
-                </section>
 
-                <section>
-                <div class="area">
-                <div class="situmon_zaitaku">報酬金額はおいくらでしたか？？</div>
-                <div class="ans_zaitaku_5">
-                    <div class="ans_zaitaku_sen">
-                        {{item["reward_first"]}}
-                    </div>
-                </div>
-                <div class="small_img_5">
-                    <img src="../{{item['Flask_Logo']}}"> 
-                </div>
-                </div>
-                </section>
+
+
 
                 <section>
                     <div class="area">
-                    <div class="situmon_zaitaku">フリーランスで働きたい人に向けて何か一言お願いします！</div>
-                    <div class="ans_zaitaku_6">
-                        <div class="ans_zaitaku_sen">
-                            {{item["memo_last"]}}
-                        </div>
+                        
+                    <div class="situ_bl">
+                    <div class="situmon_zaitaku_1">案件（仕事）を自分で取ってきてから、完了させるまでにかかった時間を教えてください！</div>
                     </div>
-                    <div class="small_img_6">
-                        <img src="../{{item['Flask_Logo']}}"> 
+    
+                    <div class="ans_bl">
+                    <div class="ans_zaitaku"><div class="ans_zaitaku_sen">{{item["Total_time"]}}</div></div>  
+                    <div class="small_img"><img src="../{{item['Flask_Logo']}}"> </div>
                     </div>
+                
                     </div>
                 </section>
+
+
+
 
                 <section>
                     <div class="area">
+                        
+                    <div class="situ_bl">
+                    <div class="situmon_zaitaku_1">初めての案件（仕事）に取り組んでみた感想をお聞かせください！(楽しかった事、大変だった事）</div>
+                    </div>
+    
+                    <div class="ans_bl">
+                    <div class="ans_zaitaku"><div class="ans_zaitaku_sen">{{item["content_3"]}}</div></div>  
+                    <div class="small_img"><img src="../{{item['Flask_Logo']}}"> </div>
+                    </div>
+                
                     </div>
                 </section>
 
+
+
+
+                <section>
+                    <div class="area">
+                        
+                    <div class="situ_bl">
+                    <div class="situmon_zaitaku">報酬金額はおいくらでしたか？？</div>
+                    </div>
+    
+                    <div class="ans_bl">
+                    <div class="ans_zaitaku"><div class="ans_zaitaku_sen">{{item["reward_first"]}}</div></div>  
+                    <div class="small_img"><img src="../{{item['Flask_Logo']}}"> </div>
+                    </div>
+                
+                    </div>
+                </section>
+
+
+
+
+                <section>
+                    <div class="area">
+                        
+                    <div class="situ_bl">
+                    <div class="situmon_zaitaku">フリーランスで働きたい人に向けて一言お願いします！</div>
+                    </div>
+    
+                    <div class="ans_bl">
+                    <div class="ans_zaitaku"><div class="ans_zaitaku_sen">{{item["memo_last"]}}</div></div>  
+                    <div class="small_img"><img src="../{{item['Flask_Logo']}}"> </div>
+                    </div>
+                
+                    </div>
+                </section>
+
+
+
+                
                 <td>
                     <form action="/del/{{item['id']}}" method="post">
                         <input type="submit" value="削除" onclick="return check()">
@@ -165,7 +191,7 @@
 
                 
                 <footer><small>&copy; separate corporation.</small></footer>
-                </section>
+                
         </body>
     </div>
 </div>
