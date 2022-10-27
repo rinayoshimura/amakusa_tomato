@@ -496,6 +496,11 @@ def ten_detail():
 
 
 
+#目的ページにとぶ
+@app.route("/mokuteki")
+def mokuteki():
+    return render_template("mokuteki.html")
+
 
 
 
