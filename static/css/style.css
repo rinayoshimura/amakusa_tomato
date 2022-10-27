@@ -1,12 +1,44 @@
-/* .header{
-    background-color:white;
-    color:#9ef6f6;
-    text-align: center;
-    position: sticky;
-} */
+@charset "UTF-8";
 
+html {
+	overflow-y: scroll;
+	/* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
 
+/* リセットおまじない--------------------------------- */
 
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+
+/* --------------------------------------------------- */
 
 header {
 	background: white;
@@ -15,14 +47,15 @@ header {
     padding:auto 0 auto 0;
 	position: fixed;
     top:0;
-    height: 5%;
+    height: 5vh;
 	width: 100%;
     margin-top: 0;
     z-index: 100000;
 }
 header h2{
+    height: 5vh;
     display: flex;
-    padding:5px 10px;
+    padding-top: auto;
     float: left;
     color:#9ef6f6
     
@@ -30,7 +63,7 @@ header h2{
 
 header ul {
     margin:0px 0px 0px 0px;
-    padding:5px 10px;
+    padding-top: auto;
     display: flex;
 	float: right;
 }
@@ -40,6 +73,7 @@ li{
 }
 
 header li p{
+    padding-top: auto;
     margin:5px 0px 0px 0px;
     margin-right: 40px;
 	transition: 0.2s;
@@ -115,6 +149,8 @@ dl {
 
 /* プロ写真と名前ブロックの幅 */
 .report .uvoice dt {
+    margin-left: auto;
+    margin-right: auto;
     width: 150px;
 }
 
@@ -127,6 +163,9 @@ dl {
 
 dt {
     display: block;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -143,6 +182,10 @@ dt {
 
 /* 写真下の文字に関するところ */
 .report .uvoice dt {
+    /* display: flex; */
+    
+  justify-content: center;
+  align-items: center;
     font-size: 12px;
     text-align: center;
 } 
@@ -165,7 +208,7 @@ p {
 
 /* 吹き出し（かっこ部分） */
 .arrow_box{
-    width: 400px;
+    /* width: 400px; */
 	position: relative;
     background-color:#f4fdfd;
     border-radius: 20px;
@@ -206,7 +249,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 40px auto;
+    margin: 10vh auto;
     max-width: 300px;
     padding: 20px 25px;
     color: #454444;
@@ -251,8 +294,8 @@ p {
     border: 5px solid orange;
     background: mediumturquoise;
     border-radius: 40%;
-    width: 50px;
-    height: 20px;
+    /* width: 50px;
+    height: 20px; */
     /* position: relative; */
     /* display: flex; */
     position: relative;

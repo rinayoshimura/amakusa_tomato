@@ -4,63 +4,66 @@
        
 
 <div id="wrapper_2_1">
+
+
     <div id="fixed-area_2_1"><!--左固定エリア-->
-        <div class="circle_2_1_1">
-            <div class="circle_2_1_2">
-                <div class="syasin_2_1" >
-                    <div class="image_mouseover_2">
-                    <img src="../static/IMG/zaitaku_woman.png" width="230" height="280">
-                    </div>
-                </div>
+        <!-- <div class="circle_2_1_1">
+        <div class="circle_2_1_2"> -->
+        <div class="syasin_2_1" >
+            <div class="image_mouseover_2">
+            <img src="../static/IMG/zaitaku_1122.png">
             </div>
+        
         </div>
-    
-        <h1 class="class_2_1">ふりーらんす</h1>
+        <!-- <h1 class="class_2_1">ふりーらんす</h1> -->
     </div>
+
+
+
+
+
       
     <div id="container"><!--右エリア-->
     
-        <body class="white">
+        
 
-            <div class="button007">
-                <a href="/add">あなたの情報を教えてください！🙇‍♂️</a>
-                
-            </div>
+        <div class="button007">
+            <a href="/add">あなたの情報を教えてください！🙇‍♂️</a>
+            
+        </div>
 
-            <div class="detail">
-            <form action="/zaitaku_detail" method="post">
-                <p>受講会場で探す<br>
-                    <select name="place">
-                    <option value="全部">選択してください</option>                    
-                    <option value="AMAKUSA">AMAKUSA</option>
-                    <option value="YATUSHIRO">YATUSHIRO</option>
-                    <option value="FUKUOKA">FUKUOKA</option>
-                    <option value="TAKAMATSU">TAKAMATSU</option>
-                    <option value="IDOBA">IDOBA</option>
-                    <option value="EBETSU">EBETSU</option>
-                    <option value="KOZA">KOZA</option>
-                    <option value="ONLINE">ONLINE</option>
-                    <option value="">SUNABACO受講歴なし</option>
+        <div class="detail">
+        <form action="/zaitaku_detail" method="post">
+            <p>受講会場で探す<br>
+                <select name="place">
+                <option value="全部">選択してください</option>                    
+                <option value="AMAKUSA">AMAKUSA</option>
+                <option value="YATUSHIRO">YATUSHIRO</option>
+                <option value="FUKUOKA">FUKUOKA</option>
+                <option value="TAKAMATSU">TAKAMATSU</option>
+                <option value="IDOBA">IDOBA</option>
+                <option value="EBETSU">EBETSU</option>
+                <option value="KOZA">KOZA</option>
+                <option value="ONLINE">ONLINE</option>
+                <option value="">SUNABACO受講歴なし</option>
 
-                    </select>
-                </p>
-                <input type="submit" name="save" value="検索">
-            </form>
-            </div>
+                </select>
+            </p>
+            <input type="submit" name="save" value="検索">
+        </form>
+        </div>
 
 
         
 
 
-            <div class="button0070">
-                <a href="/">もどる</a>                
-            </div>
+        <div class="button0070">
+            <a href="/">もどる</a>                
+        </div>
 
         <section>
             {% for item in task_list %}
             
-
-
             <div class ="report">
                 <dl class ="uvoice">
                     
@@ -80,6 +83,7 @@
                             </form>
                             
                         </dt>
+
                         <dd>
                             <div class="arrow_box">
                                 <p><h2>{{item["hitokoto_0"]}}</h2></p>
@@ -98,7 +102,7 @@
 
             <footer><small>&copy; separate corporation.</small></footer>
         </section>
-        </body>
+        
         
     </div>
 </div>

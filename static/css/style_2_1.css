@@ -1,4 +1,44 @@
-@charset "utf-8";
+@charset "UTF-8";
+
+html {
+	overflow-y: scroll;
+	/* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+
+/* リセットおまじない--------------------------------- */
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+
+/* --------------------------------------------------- */
 
 /*========= レイアウトのためのCSS ===============*/
 
@@ -29,8 +69,8 @@ small{
 /*左エリア*/
 #fixed-area_2_1{
   /*左固定記述*/
-    position: -webkit-sticky;/*Safari用*/
-    position: sticky;
+  position: -webkit-sticky;/*Safari用*/
+  position: sticky;
   top:0;
   /*横半分50%縦を100vhにする*/
   width: 50%;
@@ -46,10 +86,9 @@ small{
 }
 
 .syasin_2_1{
-   
   /*横半分50%縦を100vhにする*/
-  width: 87%;
-  height: 47vh;
+  /* width: 87%;
+  height: 47vh; */
   /*装飾のためのCSS*/
   display: flex;
   justify-content: center;
@@ -60,9 +99,15 @@ small{
   color:#fff;
 }
 
+.syasin_2_1 img{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
 
 
-.circle_2_1_1 {
+
+/* .circle_2_1_1 {
     width: 25rem;
     height: 25rem;
     border: solid 20px white;
@@ -82,9 +127,12 @@ small{
   border-radius: 10px;
   color:#9ef6f6;
   border-bottom:10px solid #e8ff85;
-  /* border-right:7px solid #5d9595; */
   background-color: white;
-}
+} */
+
+
+
+
 
 
 
@@ -96,13 +144,18 @@ small{
 /*右各セクション 装飾のためのCSS*/
 section{
   min-height: 100vh;
-  padding:30px;
-}
+  margin-left: auto;
+  margin-right: auto;
 
+}
+dd{
+  display: flex;
+}
 section:nth-of-type(2n){
 /*装飾のためのCSS*/
   background:#eee;
 }
+
 
 .arrow_box h2{
   color: rgb(55, 55, 55);
@@ -201,7 +254,11 @@ section:nth-of-type(2n){
   text-align: center;
   border: #89d755 5px solid;
   padding: 5px 7px;
-  margin: 0 32%;
+  margin-top:5vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+
   border-radius: 7px;
   background-color: #B3E692;
   opacity: 0.8;
