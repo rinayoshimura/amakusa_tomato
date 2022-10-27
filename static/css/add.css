@@ -13,9 +13,11 @@
     text-align: center;
 }
 
-p{
+.send_form_1 p{
     font-size: 16px;
     text-align: left;
+    margin-top: 40px;
+
 }
 
 input:focus{
@@ -36,3 +38,14 @@ input:focus{
     bottom: -3px;
     width: 30%;
   }
+
+
+.saisyuu{
+  border: #ffc778 5px solid;
+  padding:10px 40px;
+  text-align: center;
+}
+
+.saisyuu p{
+  text-align: center;
+}

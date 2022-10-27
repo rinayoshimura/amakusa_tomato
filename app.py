@@ -24,7 +24,7 @@ def main():
 
 
 
-
+#フリーランス追加ページ
 @app.route("/add",methods =["GET"])
 def add_get():
     return render_template("add.html")
@@ -59,6 +59,44 @@ def add_post():
     conn.commit()
     c.close()
     return redirect("/")
+
+
+
+#雇用追加ページ
+@app.route("/add_ten",methods =["GET"])
+def add_ten_get():
+    return render_template("add_ten.html")
+
+
+# @app.route("/add_ten",methods = ["POST"])
+# def add_post():
+#     display_name=request.form.get("display_name")
+#     twitter_id=request.form.get("twitter_id")
+#     era=request.form.get("era")
+#     place=request.form.get("place")
+#     hitokoto_0=request.form.get("hitokoto_0")
+#     seibetu=request.form.get("seibetu")
+#     Total_time=request.form.get("Total_time")
+#     sunabaco=request.form.get("sunabaco")
+#     hitokoto_ten=request.form.get("hitokoto_ten")
+#     content_ten1=request.form.get("content_ten1")
+#     content_ten2=request.form.get("content_ten2")
+#     reward_first=request.form.get("reward_first")
+#     content_1=request.form.get("content_1")
+#     content_2=request.form.get("content_2")
+#     content_3=request.form.get("content_3")
+#     content_ten3=request.form.get("content_ten3")
+#     sougyou=request.form.get("sougyou")
+#     memo_last=request.form.get("memo_last")
+#     class_00=request.form.get("class_00")
+
+    
+#     conn=sqlite3.connect("try.db")
+#     c=conn.cursor()
+#     c.execute("INSERT INTO users VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",(display_name,twitter_id,era,place,hitokoto_0,seibetu,Total_time,sunabaco,hitokoto_ten,content_ten1,content_ten2,reward_first,content_1,content_2,content_3,content_ten3,sougyou,memo_last,class_00,))
+#     conn.commit()
+#     c.close()
+#     return redirect("/")
 
 
 # #表示機能(amakusa)
