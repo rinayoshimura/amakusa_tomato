@@ -72,8 +72,8 @@ h1 .class_2_1{
 .syasin_2_1{
    
   /*横半分50%縦を100vhにする*/
-  width: 83%;
-  height: 47vh;
+  /* width: 83%;
+  height: 47vh; */
   /*装飾のためのCSS*/
   display: flex;
   justify-content: center;
@@ -84,21 +84,7 @@ h1 .class_2_1{
   color:#fff;
 }
 
-.circle_2_2_2 {
-    width: 30rem;
-    height: 30rem;
-    border: solid 7px #9ef6f6;
-    border-radius: 50%;
-}
 
-
-.class_2_2{
-  padding:5px 10px;
-  border-radius: 10px;
-  color: #9ef6f6;
-  border-bottom:10px solid #e8ff85;
-  background-color: white;
-}
 
 
 

@@ -69,8 +69,8 @@ small{
 /*左エリア*/
 #fixed-area_2_1{
   /*左固定記述*/
-    position: -webkit-sticky;/*Safari用*/
-    position: sticky;
+  position: -webkit-sticky;/*Safari用*/
+  position: sticky;
   top:0;
   /*横半分50%縦を100vhにする*/
   width: 50%;
@@ -86,10 +86,9 @@ small{
 }
 
 .syasin_2_1{
-   
   /*横半分50%縦を100vhにする*/
-  width: 87%;
-  height: 47vh;
+  /* width: 87%;
+  height: 47vh; */
   /*装飾のためのCSS*/
   display: flex;
   justify-content: center;
@@ -100,9 +99,15 @@ small{
   color:#fff;
 }
 
+.syasin_2_1 img{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
 
 
-.circle_2_1_1 {
+
+/* .circle_2_1_1 {
     width: 25rem;
     height: 25rem;
     border: solid 20px white;
@@ -122,9 +127,12 @@ small{
   border-radius: 10px;
   color:#9ef6f6;
   border-bottom:10px solid #e8ff85;
-  /* border-right:7px solid #5d9595; */
   background-color: white;
-}
+} */
+
+
+
+
 
 
 
@@ -136,13 +144,18 @@ small{
 /*右各セクション 装飾のためのCSS*/
 section{
   min-height: 100vh;
-  padding:30px;
-}
+  margin-left: auto;
+  margin-right: auto;
 
+}
+dd{
+  display: flex;
+}
 section:nth-of-type(2n){
 /*装飾のためのCSS*/
   background:#eee;
 }
+
 
 .arrow_box h2{
   color: rgb(55, 55, 55);
@@ -241,7 +254,11 @@ section:nth-of-type(2n){
   text-align: center;
   border: #89d755 5px solid;
   padding: 5px 7px;
-  margin: 0 32%;
+  margin-top:5vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+
   border-radius: 7px;
   background-color: #B3E692;
   opacity: 0.8;

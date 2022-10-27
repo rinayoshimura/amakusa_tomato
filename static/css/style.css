@@ -149,6 +149,8 @@ dl {
 
 /* プロ写真と名前ブロックの幅 */
 .report .uvoice dt {
+    margin-left: auto;
+    margin-right: auto;
     width: 150px;
 }
 
@@ -161,6 +163,9 @@ dl {
 
 dt {
     display: block;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -177,6 +182,10 @@ dt {
 
 /* 写真下の文字に関するところ */
 .report .uvoice dt {
+    /* display: flex; */
+    
+  justify-content: center;
+  align-items: center;
     font-size: 12px;
     text-align: center;
 } 
@@ -199,7 +208,7 @@ p {
 
 /* 吹き出し（かっこ部分） */
 .arrow_box{
-    width: 400px;
+    /* width: 400px; */
 	position: relative;
     background-color:#f4fdfd;
     border-radius: 20px;
@@ -240,7 +249,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 40px auto;
+    margin: 10vh auto;
     max-width: 300px;
     padding: 20px 25px;
     color: #454444;
@@ -285,8 +294,8 @@ p {
     border: 5px solid orange;
     background: mediumturquoise;
     border-radius: 40%;
-    width: 50px;
-    height: 20px;
+    /* width: 50px;
+    height: 20px; */
     /* position: relative; */
     /* display: flex; */
     position: relative;
