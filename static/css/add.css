@@ -1,0 +1,38 @@
+.send_form {
+    background: whitesmoke;
+    margin: 10px 290px;
+    padding: 25px;  
+}
+
+.send_form_1 {
+  background: #B3E692;
+  z-index: 1;
+}   
+.title_1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    font-size: 16px;
+    text-align: left;
+}
+
+input:focus{
+	background: #adadad;
+}
+
+.onegai{
+    font-size: 20px;
+    border-bottom: solid 3px skyblue;
+    position: relative;
+  }
+  
+  .onegai:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px #ffc778;
+    bottom: -3px;
+    width: 30%;
+  }

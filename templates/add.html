@@ -2,67 +2,67 @@
 {% block content %}
    
 <form action="/add" method="post">
+<div class="send_form_1">
+  <div class ="send_form">
+    <h2 class="title_1">入力フォーム</h2>
+        <p class="onegai">
+          お手数ですが、<br>できるだけ具体的に回答をよろしくお願いします<br><br>
+        </p>
 
-    <h2>入力フォーム</h2>
-    <p>
-        お手数ですが、できるだけ具体的に回答をよろしくお願いします<br><br>
-    </p>
+        <p>Twitterアカウント名<br>
+          <input type="text" size="50" name="display_name" placeholder="SUNABACO公式">
+        </p>
 
-    <p>Twitterアカウント名<br>
-        <input type="text" size="30" name="display_name">
-    </p>
-
-    <p>TwitterのID<br>
-        <input type="text" size="50" name="twitter_id">
-    </p>
+        <p>TwitterのID<br>
+          <input type="text" size="50" name="twitter_id" placeholder="@sunabaco">
+        </p>
     
 
-    <p>性別<br>
-        <input type="radio" name="seibetu" value="男性"> 男性
-        <input type="radio" name="seibetu" value="女性"> 女性
-    </p>
+        <p>性別<br>
+            <input type="radio" name="seibetu" value="男性"> 男性
+            <input type="radio" name="seibetu" value="女性"> 女性
+        </p>
 
-    <p>年代<br>
-        <input type="radio" name="era" value="10代〜20代"> 10代〜20代
-        <input type="radio" name="era" value="30代〜40代"> 30代〜40代
-        <input type="radio" name="era" value="50代〜"> 50代〜
-    </p>
+        <p>年代<br>
+            <input type="radio" name="era" value="10代〜20代"> 10代〜20代
+            <input type="radio" name="era" value="30代〜40代"> 30代〜40代
+            <input type="radio" name="era" value="50代〜"> 50代〜
+        </p>
 
-    <p>SUNABACOで何かしらの講座を受講した経験はありますか？？<br>
-        <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">はい
-        <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">いいえ
-    </p>
+        <p>SUNABACOで何かしらの講座を受講した経験はありますか？？<br>
+            <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">はい
+            <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">いいえ
+        </p>
 
 
-    <p>sunabacoの受講会場<br>
-        <select name="place">
-        <option value="">SUNABACO受講経験のある方は以下から選択してください</option>
-        <option value="AMAKUSA">AMAKUSA</option>
-        <option value="YATUSHIRO">YATUSHIRO</option>
-        <option value="FUKUOKA">FUKUOKA</option>
-        <option value="TAKAMATSU">TAKAMATSU</option>
-        <option value="IDOBA">IDOBA</option>
-        <option value="EBETSU">EBETSU</option>
-        <option value="KOZA">KOZA</option>
-        <option value="ONLINE">ONLINE</option>
-        </select>
-    </p>
+        <p>sunabacoの受講会場<br>
+            <select name="place">
+            <option value="">SUNABACO受講経験のある方は以下から選択してください</option>
+            <option value="AMAKUSA">AMAKUSA</option>
+            <option value="YATUSHIRO">YATUSHIRO</option>
+            <option value="FUKUOKA">FUKUOKA</option>
+            <option value="TAKAMATSU">TAKAMATSU</option>
+            <option value="IDOBA">IDOBA</option>
+            <option value="EBETSU">EBETSU</option>
+            <option value="KOZA">KOZA</option>
+            <option value="ONLINE">ONLINE</option>
+            </select>
+        </p>
 
     
 
 
 
 
-   
-    <p>プロフィールの見出しになる部分です！<br>
-        一番自分に近いものを選んでください！<br>
+
+    <p>プロフィールの見出しになる部分です！<br>一番自分に近いものを選んでください！<br>
         <input type="radio" name="hitokoto_0" value="在宅で仕事をしています！">在宅で仕事をしています！<br>
         <input type="radio" name="hitokoto_0" value="案件をとった事があります！"> 案件をとった事があります！<br>
         <input type="radio" name="hitokoto_0" value="フリーランスで活動しています！"> フリーランスで活動しています！<br>
         <input type="radio" name="hitokoto_0" value="在宅でもできる副業をしています！">在宅でもできる副業をしています！<br>
         <input type="radio" name="hitokoto_0" value="副業でお小遣いを稼いでいます！"> 副業でお小遣いを稼いでいます！<br>
         <input type="radio" name="hitokoto_0" value="個人事業主として活動しています！"> 個人事業主として活動しています！<br>
-        <p>その他<input type="text" size="100" name="hitokoto_0"></p>
+        <p>その他<input type="text" size="60" name="hitokoto_0"></p>
     </p>
 
     <p>人生で初めて取り組んだ案件を見つけた場所をできるだけ具体的に教えてください！<br>
@@ -71,7 +71,7 @@
     </p>
 
     <p>初めて受注した案件の業務内容を具体的に教えてください<br>
-        <textarea name="content_2" cols="30" rows="5"></textarea>
+        <textarea name="content_2" cols="80" rows="5"></textarea>
     </p>
 
     <p>初めての案件にかかった時間（案件をとってから完了するまで）<br>
@@ -79,7 +79,7 @@
     </p>
 
     <p>初めて受注した案件に取り組んでみて、頑張ったこと、大変だったこと、追加で勉強した事などがあれば、詳しく教えてください！<br>
-        <textarea name="content_3" cols="30" rows="5"></textarea>
+        <textarea name="content_3" cols="80" rows="5"></textarea>
     </p>
 
     <p>もしよければ初案件の報酬金額を教えてください<br>
@@ -95,9 +95,7 @@
 
 
 
-    <h2>プロフィールの見出しになる部分です</h2>
-    <p>
-        自分に一番近いものを選んでください！
+    <p>プロフィールの見出しになる部分です<br>自分に一番近いものを選んでください！<br>
         <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで就職（転職）できました!">SUNABACOのおかげで就職（転職）できました!<br>
         <input type="radio" name="hitokoto_ten" value="プログラミングの仕事が楽しいです！"> プログラミングの仕事が楽しいです！<br>
         <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで考え方が変わりました!"> SUNABACOのおかげで考え方が変わりました!<br>
@@ -117,20 +115,20 @@
     </p>
 
     <p>SUNABACO卒業後に就職・転職をして、プログラミングに関わる仕事をするにあたり、今の仕事について「楽しいと感じる事」「むずかしい（辛い）」と感じる事を教えてください<br>
-        <textarea name="content_ten3" cols="30" rows="5"></textarea>
+        <textarea name="content_ten3" cols="80" rows="5"></textarea>
     </p>
 
     <h4>創業された方</h4>
     <p>もし可能であれば、創業してどのようなことをされているのか（どのような会社を創業したのか）を教えてください！<br>
-        <textarea name="sougyou" cols="30" rows="5"></textarea>
+        <textarea name="sougyou" cols="80" rows="5"></textarea>
     </p>
 
 
     <p>これから「在宅で仕事がしたい！」と考えている人にアドバイスをお願いします！🙇<br>
-        <textarea name="memo_last" cols="30" rows="5"></textarea>
+        <textarea name="memo_last" cols="80" rows="5"></textarea>
     </p>
 
-    <p>クラス振り分け<br>
+    <p>あてはまるものを選んでください<br>
         <input type="radio" size="50" name="class_00" value="在宅">在宅
         <input type="radio" size="50" name="class_00" value="就職・転職">就職・転職
         <input type="radio" size="50" name="class_00" value="創業">創業
@@ -141,6 +139,8 @@
     
 
     <input type="submit" name="save" value="送信">
+</div>
+</div>
 </form>
 
 <a href="/">mainページへ</a>
