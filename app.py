@@ -389,7 +389,12 @@ def zaitaku_detail():
     c = conn.cursor()
     #()内のSQL文を実行
 
-    c.execute("SELECT id,display_name,era,hitokoto_0,seibetu,place FROM users where class_00 = '在宅' AND place =?;",(place,))
+    if "全部" ==place:
+         c.execute("SELECT id,display_name,era,hitokoto_0,seibetu,place FROM users where class_00 = '在宅';")
+    
+    else:
+        c.execute("SELECT id,display_name,era,hitokoto_0,seibetu,place FROM users where class_00 = '在宅' AND place =?;",(place,))
+
 
     # c.execute("SELECT seibetu,era FROM users WHERE class_00 = '在宅';")
     task_list = []
@@ -430,6 +435,9 @@ def zaitaku_detail():
     # print("-------------------------------------")
     # print(Flask_Logo)
     return render_template("zaitaku_list.html", task_list = task_list)
+
+
+
 
 
 
