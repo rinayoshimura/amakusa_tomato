@@ -211,3 +211,34 @@ section:nth-of-type(2n){
 
 
 
+
+
+
+
+.btn-submit_add{
+  display: flex;
+  left: 42%;
+  display: block;
+  padding: 5px 20px;
+  position:relative;
+  text-align: center;
+  bottom:20px;
+  border: none;
+  margin-top: 50px;
+
+
+  background-color: #89b72e;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+}
+.btn-submit_add:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color:orange;
+}
+
+
+

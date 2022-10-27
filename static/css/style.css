@@ -35,6 +35,10 @@ header ul {
 	float: right;
 }
 
+li{
+    list-style: none;
+}
+
 header li p{
     margin:5px 0px 0px 0px;
     margin-right: 40px;
