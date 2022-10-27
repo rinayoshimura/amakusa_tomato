@@ -31,7 +31,7 @@
             <form action="/zaitaku_detail" method="post">
                 <p>受講会場で探す<br>
                     <select name="place">
-                    <option value="">選択されていません</option>
+                    <option value="全部">選択してください</option>                    
                     <option value="AMAKUSA">AMAKUSA</option>
                     <option value="YATUSHIRO">YATUSHIRO</option>
                     <option value="FUKUOKA">FUKUOKA</option>
@@ -40,18 +40,16 @@
                     <option value="EBETSU">EBETSU</option>
                     <option value="KOZA">KOZA</option>
                     <option value="ONLINE">ONLINE</option>
+                    <option value="">SUNABACO受講歴なし</option>
+
                     </select>
                 </p>
-
-                <!-- <p>SUNABACO受講経験の有無<br>
-                    <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">あり
-                    <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">なし
-                </p> -->
-
-
                 <input type="submit" name="save" value="検索">
             </form>
             </div>
+
+
+        
 
 
             <div class="button0070">
@@ -60,11 +58,12 @@
 
         <section>
             {% for item in task_list %}
+            
 
 
             <div class ="report">
                 <dl class ="uvoice">
-                    <table border="1">
+                    
                         <dt>
                            
 
@@ -86,7 +85,7 @@
                                 <p><h2>{{item["hitokoto_0"]}}</h2></p>
                             </div>
                         </dd>
-                    </table>
+                    
                 </dl>  
             </div>
             <!-- <form action="/del/{{item['id']}}" method="post">

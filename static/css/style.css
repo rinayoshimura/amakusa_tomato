@@ -1,9 +1,57 @@
-.header{
+/* .header{
     background-color:white;
     color:#9ef6f6;
     text-align: center;
     position: sticky;
+} */
+
+
+
+
+header {
+	background: white;
+    opacity: 0.8;
+	text-align: center;
+    padding:auto 0 auto 0;
+	position: fixed;
+    top:0;
+    height: 5%;
+	width: 100%;
+    margin-top: 0;
+    z-index: 100000;
 }
+header h2{
+    display: flex;
+    padding:5px 10px;
+    float: left;
+    color:#9ef6f6
+    
+}
+
+header ul {
+    margin:0px 0px 0px 0px;
+    padding:5px 10px;
+    display: flex;
+	float: right;
+}
+
+header li p{
+    margin:5px 0px 0px 0px;
+    margin-right: 40px;
+	transition: 0.2s;
+}
+
+header li p:hover {
+	/*メニューをホバーしたときに色が変わる*/
+	color: orange;
+}
+
+
+
+
+
+
+
 
 .footer_2_1{
     background-color:#9ef6f6;
@@ -154,7 +202,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 30px auto;
+    margin: 40px auto;
     max-width: 300px;
     padding: 20px 25px;
     color: #454444;
@@ -253,3 +301,22 @@ p {
     transition-duration: 0.12s;
 }
 
+
+
+
+
+
+
+
+
+/*ヘッダーボタン*/
+.header_btn a{
+    
+    background: #fbfb46;
+    justify-content: space-around;
+    align-items: center;
+    color: #454444;
+    transition: 0.3s ease-in-out;
+    text-decoration:none;
+    
+}

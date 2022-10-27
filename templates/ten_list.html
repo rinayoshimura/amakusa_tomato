@@ -30,7 +30,7 @@
             <form action="/ten_detail" method="post">
                 <p>受講会場で探す<br>
                     <select name="place">
-                    <option value="">選択されていません</option>
+                    <option value="全部">選択されていません</option>
                     <option value="AMAKUSA">AMAKUSA</option>
                     <option value="YATUSHIRO">YATUSHIRO</option>
                     <option value="FUKUOKA">FUKUOKA</option>
@@ -39,6 +39,7 @@
                     <option value="EBETSU">EBETSU</option>
                     <option value="KOZA">KOZA</option>
                     <option value="ONLINE">ONLINE</option>
+                    <option value="">SUNABACO受講歴なし</option>
                     </select>
                 </p>
 
@@ -63,7 +64,7 @@
 
             <div class ="report">
                 <dl class ="uvoice">
-                    <table border="1">
+                    
                         <dt>
                             <!-- <img src="{{ user_image }}" mid="2251582"> -->
                             <img src="{{item['Flask_Logo']}}" mid="2251582">
@@ -81,7 +82,7 @@
                                 <p><h2>{{item["hitokoto_ten"]}}</h2></p>
                             </div>
                         </dd>
-                    </table>
+                    
                 </dl>  
             </div>
                 

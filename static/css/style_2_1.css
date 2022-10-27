@@ -196,6 +196,8 @@ section:nth-of-type(2n){
 
 .detail form{
   /* max-width: 300px; */
+  /* display: flex; */
+  display: block;
   text-align: center;
   border: #89d755 5px solid;
   padding: 5px 7px;
@@ -205,4 +207,7 @@ section:nth-of-type(2n){
   opacity: 0.8;
   /* float: right; */
 }
+
+
+
 
