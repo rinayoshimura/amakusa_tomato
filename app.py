@@ -451,6 +451,8 @@ def ten_detail():
     conn = sqlite3.connect("try.db")
     #「sqlite3で接続したものを操作してね」ということをcに代入
     c = conn.cursor()
+
+    
     #()内のSQL文を実行
     c.execute("SELECT id,display_name,era,hitokoto_ten,seibetu,place FROM users where class_00 = '就職・転職' AND place = ?;",(place,))
     #タスクリストを入れる配列を定義
