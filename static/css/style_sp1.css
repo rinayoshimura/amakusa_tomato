@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+html {
+	overflow-y: scroll;
+	/* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+
+/* リセットおまじない--------------------------------- */
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+
+/* --------------------------------------------------- */
+
+header .hum_menu a {
+    display: block;
+    height: 20px;
+    width: 40px;
+    padding: 10px 0;
+    background-color: #eeeaec;
+    text-align: center;
+}
+header .hum_menu span {
+    display: block;
+    height:  2px;
+    width: 20px;
+    background-color: #aaa;
+    margin: 3px auto;
+}
+header ul {
+    display: none;
+    margin-right: 40px;
+
+}
+header ul li {
+    width: 50%;
+    color: #acacac;
+    line-height: 40px;
+    text-align: left;
+    font-weight: 12px;
+    text-indent: 8px;
+}
+header ul li a {
+    display: block;
+    border: 1px solid #555;
+    border-width: 1px 1px 0 0;
+}
+header.open {
+    background-color: #eeeace;
+}
+header.open ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header h2{
+	height: 3vh;
+    display: flex;
+    padding-top: auto;
+    float: left;
+    color:#9ef6f6
+}
+.message_top{
+	background-color: #B3E692;
+	/* width: 100%; */
+	margin-top: 5vh;
+	font-size:  10px;
+	
+  }
+  
+  .message_top h1{
+	color: whitesmoke;
+	flex-direction: column;
+	text-align: right;
+	border-bottom: 2vh white solid;
+  }
+  
+  span{
+	color:orange;
+  }
+ img {
+	max-width:100%;
+ }

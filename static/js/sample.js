@@ -102,3 +102,15 @@ $(window).on('load', function () {
 
   EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+$(function() {
+  $('.hum_menu').click(function() {
+      $(this).toggleClass('active');
+
+      if ($(this).hasClass('active')) {
+          $('.header_btn').addClass('active');
+      } else {
+          $('.header_btn').removeClass('active');
+      }
+  });
+});
