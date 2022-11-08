@@ -1,0 +1,176 @@
+/*----------右側吹き出し------------*/
+    .situmon_zaitaku p{  
+      /* position:relative;
+      width:370px;
+      height:60px;
+      background:#B3E692;
+      padding:25px;
+      text-align:center;
+      color:#333333;
+      font-size:20px;
+     */
+      background-color:#B3E692;
+      color:#333333;
+      margin: 30px 0;
+      padding: 0.3em 1em 2em 1em;
+      width: 370px;
+      overflow-wrap: break-word;
+      text-align: center;
+      /* border-radius:48px;
+      -webkit-border-radius:48px;
+      -moz-border-radius:48px; */
+  }
+  .situmon_zaitaku:after{
+      border: solid transparent;
+      content:'';
+      margin: -15px;
+      height:0;
+      width:0;
+      pointer-events:none;
+      position:absolute;
+      border-color: rgba(179, 230, 146, 0);
+      border-top-width:11px;
+      border-bottom-width:11px;
+      border-left-width:41px;
+      border-right-width:41px;
+      margin-top: -11px;
+      border-right-color:#B3E692;
+      right:100%;
+      top:49%;
+  }
+  
+  .situmon_zaitaku_1{
+      position:relative;
+      width:300px;
+      height:90px;
+      background:#B3E692;
+      padding:25px;
+      text-align:center;
+      color:#333333;
+      font-size:20px;
+      border-radius:48px;
+      -webkit-border-radius:48px;
+      -moz-border-radius:48px;
+  }
+  .situmon_zaitaku_1:after{
+      border: solid transparent;
+      content:'';
+      margin: -15px;
+      height:0;
+      width:0;
+      pointer-events:none;
+      position:absolute;
+      border-color: rgba(179, 230, 146, 0);
+      border-top-width:11px;
+      border-bottom-width:11px;
+      border-left-width:41px;
+      border-right-width:41px;
+      margin-top: -11px;
+      border-right-color:#B3E692;
+      right:100%;
+      top:49%;
+  }
+  
+  
+  
+  
+  /*回答の吹き出し*/
+  
+  .ans_zaitaku{
+      float: right;
+      background-color:#9ef6f6;
+      color:#333333;
+      /* margin: 30px 0; */
+      font-weight: bold;    
+      padding: 0.3em 1em 2em 1em;
+      border-radius: 30px;
+      opacity: 0.90;
+      width: 300px;
+      overflow-wrap: break-word;
+      text-align: center;
+      margin-bottom: 1vh;
+    }
+  
+  
+  .ans_zaitaku_sen{
+      background-color: #9ef6f6;
+      background-size: 8px 100%,100% 2em;
+      line-height: 2em;
+      padding: 2em 1em 0.2em 1em;
+  }
+  
+      /* background-image:linear-gradient(90deg, #9ef6f6 0%, #9ef6f6 50%, #9ef6f6 0%, #9ef6f6 100%), linear-gradient(180deg, #9ef6f6 0%, #9ef6f6 95%, #9ef6f6 100%); */
+  
+  
+  .small_img img{
+    width: 50px;
+    display: block;
+    margin:0 0 0 90%;
+    /* height: 100px; */
+    
+    /* margin-top: 40px;
+    position: absolute;
+    top:160px;
+    right: 40px; */
+  }
+  .small_img_2 img{
+    width: 50px;
+    /* margin-top: 450px;
+    position: absolute;
+    top:160px;
+    right: 40px; */
+  }
+  .small_img_3 img{
+    width: 50px;
+    /* margin-top: 900px;
+    position: absolute;
+    top:160px;
+    right: 40px; */
+  }
+  .small_img_4 img{
+    width: 50px;
+    /* margin-top: 1400px;
+    position: absolute;
+    top:160px;
+    right: 40px; */
+  }
+  .small_img_5 img{
+    width: 50px;
+    /* margin-top: 1900px;
+    position: absolute;
+    top:160px;
+    right: 40px; */
+  }
+  .small_img_6 img{
+    width: 50px;
+    /* margin-top: 2300px;
+    position: absolute;
+    top:160px;
+    right: 40px; */
+  }
+  
+  
+  
+  
+  a.btn--orange {
+    position: fixed;
+    bottom: 30px;
+    color:black;
+    background-color: yellow;
+    border-bottom: 5px solid yellow;
+  }
+  a.btn--orange:hover {
+    margin-top: 3px;
+    color:#8d4b4b;
+    background: yellow;
+    border-bottom: 2px solid yellow;
+  }
+  a.btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+
+  .syasin_3_1 img{
+    width: 100px;
+    margin-bottom:10px;
+}
