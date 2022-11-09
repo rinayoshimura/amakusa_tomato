@@ -1,0 +1,82 @@
+.send_form {
+    background: whitesmoke;
+    margin: 10%;
+    padding: 25px;  
+}
+
+.send_form_1 {
+  background:#B3E692;
+  z-index: 1;
+}   
+.title_1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.send_form_1 p{
+    font-size: 16px;
+    text-align: left;
+    margin-top: 40px;
+
+}
+
+input:focus{
+	background:white;
+}
+
+.onegai{
+    font-size: 20px;
+    border-bottom: solid 3px skyblue;
+    position: relative;
+  }
+  
+  .onegai:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px #ffc778;
+    bottom: -3px;
+    width: 30%;
+  }
+
+
+.saisyuu{
+  border: #ffc778 5px solid;
+  padding:10px 40px;
+  text-align: center;
+}
+
+.saisyuu p{
+  text-align: center;
+}
+
+
+/*inputタグのレイアウト*/
+.btn-submit_add{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 5px 20px;
+  position:relative;
+  left:6px;
+  bottom:20px;
+  border: none;
+
+
+  background-color: #75a555;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+}
+.btn-submit_add:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+
+  background-color: orange;
+}
+
+body .send_form_1{
+    /* background: whitesmoke; */
+}

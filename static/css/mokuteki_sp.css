@@ -1,0 +1,48 @@
+.outi{
+    background: #B3E692;
+    width: 100%;
+    height: 100vh;
+}
+.outi_1{
+    animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+    background: url(../img/ico-apple.svg) no-repeat center center / auto;
+    display: inline-block;
+    text-align: center;
+    transition: 1.5s ease-in-out;
+    font-size: 300px;
+    position: fixed;
+    top:50%;
+    height: 95%;
+    margin:auto;
+  }
+   
+  @keyframes fuwafuwa {
+    0% {
+      transform:translate(0, 0) rotate(-30deg);
+      /* transform:translate(0, 0) rotate(-2780deg); */
+    }
+    50% {
+      transform:translate(0px, -1500px) rotate(0deg);
+    }
+    100% {
+      transform:translate(0, 0) rotate(50deg);
+    }
+  }
+
+.mokuteki_1{
+  
+   /* margin-top: 30vh; */
+    position: relative;
+    top:30vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background: #fa755d;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 14px;
+    padding:10px 40px;
+    border: solid 20px white;
+    border-radius: 20px;
+    z-index: 100;
+}
