@@ -9,7 +9,7 @@
     display: inline-block;
     text-align: center;
     transition: 1.5s ease-in-out;
-    font-size: 300px;
+    font-size: 100px;
     position: fixed;
     top:50%;
     height: 95%;
@@ -40,7 +40,7 @@
     background: #fa755d;
     color: whitesmoke;
     text-align: center;
-    font-size: 14px;
+    font-size: 8px;
     padding:10px 40px;
     border: solid 20px white;
     border-radius: 20px;
