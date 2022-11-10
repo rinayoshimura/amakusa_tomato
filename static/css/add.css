@@ -76,3 +76,13 @@ input:focus{
 
   background-color: orange;
 }
+
+input.hoge {
+  width: 80%;
+}
+textarea.hoge{
+  width: 80%;
+}
+select.hoge{
+  width: 90%;
+}

@@ -109,7 +109,8 @@ span{
 }
 
 img{
-  width: 600px;
+  /* width: 600px; */
+  width: 80%;
   /* height: 400px; */
 }
 

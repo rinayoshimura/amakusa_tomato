@@ -80,3 +80,13 @@ input:focus{
 body .send_form_1{
     /* background: whitesmoke; */
 }
+
+input.hoge {
+  width: 80%;
+}
+textarea.hoge{
+  width: 80%;
+}
+select.hoge{
+  width: 90%;
+}
