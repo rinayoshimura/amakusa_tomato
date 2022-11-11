@@ -8,3 +8,32 @@
 .arrow_box h2{
     font-size: 15px;
   }
+
+  /*inputタグのレイアウト*/
+.btn-submit{
+    display: block;
+    padding: 5px 20px;
+    border-radius: 7px;
+    position:relative;
+    left:6px;
+    bottom:20px;
+    border: none;
+  
+  
+    border-bottom: 6px solid yellow;
+    background-color: #B3E692;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    appearance: none;
+  }
+  .btn-submit:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  
+    background-color: #89b72e;
+  }
+  .detail_1 {
+    height: 30px;
+  
