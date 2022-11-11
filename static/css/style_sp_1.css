@@ -198,10 +198,12 @@ header h2{
     cursor: pointer;
   }
   #nav-open span:before {
-    bottom: -8px;
+    bottom: -7px;
   }
   #nav-open span:after {
-    bottom: -16px;
+    bottom: -14px;
+    content: "MENU";
+    font-size: 5px;
   }
   
   /*閉じる用の薄黒箇所*/
