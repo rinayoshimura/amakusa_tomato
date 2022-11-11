@@ -192,7 +192,7 @@ header h2{
     height: 3px;/*線の太さ*/
     width: 25px;/*長さ*/
     border-radius: 3px;
-    background: #555;
+    background:orange;
     display: block;
     content: '';
     cursor: pointer;
@@ -257,4 +257,19 @@ header h2{
    -o-flex-direction: row;
    -webkit-flex-direction: row;
    -ms-flex-direction: row;
-  }
+}
+
+/* .hum p{
+  color: tomato;
+  font-size: x-large;
+  border-bottom: #B3E692 5px solid;
+} */
+
+.button_hum a{
+  font-size:x-large;
+  align-items: center;
+  color: hsl(93, 98%, 24%);
+
+}
+
+
