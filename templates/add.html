@@ -1,158 +1,221 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/sample.js"></script>
+    <title>github</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style_1.css" media="screen and (min-width:769px)">
+    <link rel="stylesheet" href="../static/css/style_2_1.css" media="screen and (min-width:769px)">
+    <link rel="stylesheet" href="../static/css/style_2_2.css" media="screen and (min-width:769px)">
+    <link rel="stylesheet" href="../static/css/style_3_1.css" media="screen and (min-width:769px)">
+    <link rel="stylesheet" href="../static/css/style_3_2.css" media="screen and (min-width:769px)">
+    <link rel="stylesheet" href="../static/css/add.css" media="screen and (min-width:769px)">
+    <link rel="stylesheet" href="../static/css/mokuteki.css" media="screen and (min-width:769px)">
+    
+    <link rel="stylesheet" href="../static/css/style_sp_1.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../static/css/style_sp_2_1.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../static/css/style_sp_2_2.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../static/css/style_sp_3_1.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../static/css/style_sp_3_2.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../static/css/add_sp.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../static/css/mokuteki_sp.css" media="screen and (max-width:768px)">
+
+
+</head>
+<body>
+    <!-- <header>
+        
+
+        <div class="header-logo-menu">
+            <div id="nav-drawer">
+                <input id="nav-input" type="checkbox" class="nav-unshown">
+                <label id="nav-open" for="nav-input"><span></span></label>
+                <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                <div id="nav-content">
+                    <div class="button_hum">
+                    <br>
+                    <div class="hum"><a href="/zaitaku_list"><p>フリーランス</p></a><br><br>
+                    <a href="/ten_list"><p class="hum">就職・転職</p></a><br><br>
+                    <a href="/mokuteki"><p class="hum">あぷりのもくてき</p></a><br><br>
+                    <a href="/"><p class="hum">トップページ</p></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <a href="/"><h2>🏠おうちでおしごと🏠</h2></a>
+
+		<ul>
+            <div class="header_btn">
+			<li><a href="/zaitaku_list"><p>フリーランス</p></a></li></div>
+			<div class="header_btn"><li><a href="/ten_list"><p>就職・転職</p></a></li></div>
+			<div class="header_btn"><li><a href="/mokuteki"><p>あぷりのもくてき</p></a></li></div>
+			<div class="header_btn"><li><a href="/"><p>トップページ</p></a></li></div>
+            
+		</ul>
+	</header> -->
+
+
+
+    <form action="/add" method="post">
+        <div class="send_form_1">
+          <div class ="send_form">
+            <h2 class="title_1">あなたの情報を教えてください！！</h2>
+            
+                <p class="onegai">
+                  お手数ですが、<br>できるだけ具体的に回答をよろしくお願いします<br><br>
+                </p>
+        
+                <p>Twitterアカウント名<br>
+                  <input type="text" size="50" name="display_name" placeholder="SUNABACO公式" class="hoge">
+                </p>
+        
+                <p>TwitterのID<br>
+                  <input type="text" size="50" name="twitter_id" placeholder="@sunabaco" class="hoge">
+                </p>
+            
+        
+                <p>性別<br>
+                    <input type="radio" name="seibetu" value="男性"> 男性
+                    <input type="radio" name="seibetu" value="女性"> 女性
+                </p>
+        
+                <p>年代<br>
+                    <input type="radio" name="era" value="10代〜20代"> 10代〜20代
+                    <input type="radio" name="era" value="30代〜40代"> 30代〜40代
+                    <input type="radio" name="era" value="50代〜"> 50代〜
+                </p>
+        
+                <p>SUNABACOで何かしらの講座を受講した経験はありますか？？<br>
+                    <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">はい
+                    <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">いいえ
+                </p>
+        
+        
+                <p>sunabacoの受講会場<br>
+                    <select name="place" class="hoge">
+                    <option value="">SUNABACO受講経験のある方は以下から選択してください</option>
+                    <option value="AMAKUSA">AMAKUSA</option>
+                    <option value="YATUSHIRO">YATUSHIRO</option>
+                    <option value="FUKUOKA">FUKUOKA</option>
+                    <option value="TAKAMATSU">TAKAMATSU</option>
+                    <option value="IDOBA">IDOBA</option>
+                    <option value="EBETSU">EBETSU</option>
+                    <option value="KOZA">KOZA</option>
+                    <option value="ONLINE">ONLINE</option>
+                    </select>
+                </p>
+        
+            
+        
+        
+        
+        
+                <br>
+                <br>
+                <br>
+            <p>プロフィールの見出しになる部分です！<br>一番自分に近いものを選んでください！<br>
+                <input type="radio" name="hitokoto_0" value="在宅で仕事をしています！">在宅で仕事をしています！<br>
+                <input type="radio" name="hitokoto_0" value="案件をとった事があります！"> 案件をとった事があります！<br>
+                <input type="radio" name="hitokoto_0" value="フリーランスで活動しています！"> フリーランスで活動しています！<br>
+                <input type="radio" name="hitokoto_0" value="在宅でもできる副業をしています！">在宅でもできる副業をしています！<br>
+                <input type="radio" name="hitokoto_0" value="副業でお小遣いを稼いでいます！"> 副業でお小遣いを稼いでいます！<br>
+                <input type="radio" name="hitokoto_0" value="個人事業主として活動しています！"> 個人事業主として活動しています！<br>
+                <p>その他<input type="text" size="60" name="hitokoto_0" class="hoge"></p>
+            </p>
+        
+            <p>人生で初めて取り組んだ案件を見つけた場所をできるだけ具体的に教えてください！<br>
+                （例 webのクラウドワークスというサイトに会員登録をして応募しました! 知人から教えてもらった〇〇というサイトから探しました など）<br>
+                <input type="text" size="100" name="content_1" class="hoge">
+            </p>
+        
+            <p>初めて受注した案件の業務内容を具体的に教えてください<br>
+                <textarea name="content_2" cols="80" rows="5" class="hoge"></textarea>
+            </p>
+        
+            <p>初めての案件にかかった時間（案件をとってから完了するまで）<br>
+                <input type="text" size="10" name="Total_time" class="hoge">
+            </p>
+        
+            <p>初めて受注した案件に取り組んでみて、頑張ったこと、大変だったこと、追加で勉強した事などがあれば、詳しく教えてください！<br>
+                <textarea name="content_3" cols="80" rows="5" class="hoge"></textarea>
+            </p>
+        
+            <p>もしよければ初案件の報酬金額を教えてください<br>
+                <input type="text" size="30" name="reward_first" class="hoge">
+            </p>
+        
+            <br>
+        
+        
+        
+        
+        
+        
+        
+        <!-- 
+            <p>プロフィールの見出しになる部分です<br>自分に一番近いものを選んでください！<br>
+                <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで就職（転職）できました!">SUNABACOのおかげで就職（転職）できました!<br>
+                <input type="radio" name="hitokoto_ten" value="プログラミングの仕事が楽しいです！"> プログラミングの仕事が楽しいです！<br>
+                <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで考え方が変わりました!"> SUNABACOのおかげで考え方が変わりました!<br>
+                <input type="radio" name="hitokoto_ten" value="在宅で仕事をしています！"> 在宅で仕事をしています！<br>
+                <input type="radio" name="hitokoto_ten" value="プログラミングは楽しい！"> プログラミングは楽しい！<br>
+            </p> -->
+        
+        
+            <!-- <p>就職先・転職先を見つけた場所をできるだけ具体的に教えてください！<br>
+                （例 転職サイトのリクナビネクストで今の会社に応募しました！　SUNABACOの同期から、市役所で出ていた求人を教えてもらいました！ など）<br>
+                <input type="text" size="100" name="content_ten1">
+        
+            </p>
+        
+            <p>就職先・転職先の仕事内容を具体的に教えてください！<br>
+                <input type="text" size="100" name="content_ten2">
+            </p>
+        
+            <p>SUNABACO卒業後に就職・転職をして、プログラミングに関わる仕事をするにあたり、今の仕事について「楽しいと感じる事」「むずかしい（辛い）」と感じる事を教えてください<br>
+                <textarea name="content_ten3" cols="80" rows="5"></textarea>
+            </p>
+        
+            <h4>創業された方</h4>
+            <p>もし可能であれば、創業してどのようなことをされているのか（どのような会社を創業したのか）を教えてください！<br>
+                <textarea name="sougyou" cols="80" rows="5"></textarea>
+            </p>
+         -->
+        
+            <p>これから「在宅で仕事がしたい！」と考えている人にアドバイスをお願いします！🙇<br>
+                <textarea name="memo_last" cols="80" rows="5" class="hoge"></textarea>
+            </p>
+        
+        
+        
+            <div class="saisyuu">
+            <h3>内容が確認できたら<span>必ず</span>チェックを入れてください！！</h3>
+                <p>
+                <input type="radio" size="100" name="class_00" value="在宅">投稿内容を確認しました！！
+                <!-- <input type="radio" size="50" name="class_00" value="就職・転職">就職・転職
+                <input type="radio" size="50" name="class_00" value="創業">創業 -->
+                </p>
+            </div>
+        
+            <br>
+        
+        
+            
+            
+        
+            <input type="submit" name="save" value="送信" class="btn-submit_add"> 
+        </div>
+        </div>
+        </form>
+        
+        <a href="/">mainページへ</a>
+        </body>
+</html>
+
+
    
-<form action="/add" method="post">
-<div class="send_form_1">
-  <div class ="send_form">
-    <h2 class="title_1">あなたの情報を教えてください！！</h2>
-    
-        <p class="onegai">
-          お手数ですが、<br>できるだけ具体的に回答をよろしくお願いします<br><br>
-        </p>
-
-        <p>Twitterアカウント名<br>
-          <input type="text" size="50" name="display_name" placeholder="SUNABACO公式" class="hoge">
-        </p>
-
-        <p>TwitterのID<br>
-          <input type="text" size="50" name="twitter_id" placeholder="@sunabaco" class="hoge">
-        </p>
-    
-
-        <p>性別<br>
-            <input type="radio" name="seibetu" value="男性"> 男性
-            <input type="radio" name="seibetu" value="女性"> 女性
-        </p>
-
-        <p>年代<br>
-            <input type="radio" name="era" value="10代〜20代"> 10代〜20代
-            <input type="radio" name="era" value="30代〜40代"> 30代〜40代
-            <input type="radio" name="era" value="50代〜"> 50代〜
-        </p>
-
-        <p>SUNABACOで何かしらの講座を受講した経験はありますか？？<br>
-            <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴あり">はい
-            <input type="radio" size="50" name="sunabaco" value="SUNABACO受講歴なし">いいえ
-        </p>
-
-
-        <p>sunabacoの受講会場<br>
-            <select name="place" class="hoge">
-            <option value="">SUNABACO受講経験のある方は以下から選択してください</option>
-            <option value="AMAKUSA">AMAKUSA</option>
-            <option value="YATUSHIRO">YATUSHIRO</option>
-            <option value="FUKUOKA">FUKUOKA</option>
-            <option value="TAKAMATSU">TAKAMATSU</option>
-            <option value="IDOBA">IDOBA</option>
-            <option value="EBETSU">EBETSU</option>
-            <option value="KOZA">KOZA</option>
-            <option value="ONLINE">ONLINE</option>
-            </select>
-        </p>
-
-    
-
-
-
-
-        <br>
-        <br>
-        <br>
-    <p>プロフィールの見出しになる部分です！<br>一番自分に近いものを選んでください！<br>
-        <input type="radio" name="hitokoto_0" value="在宅で仕事をしています！">在宅で仕事をしています！<br>
-        <input type="radio" name="hitokoto_0" value="案件をとった事があります！"> 案件をとった事があります！<br>
-        <input type="radio" name="hitokoto_0" value="フリーランスで活動しています！"> フリーランスで活動しています！<br>
-        <input type="radio" name="hitokoto_0" value="在宅でもできる副業をしています！">在宅でもできる副業をしています！<br>
-        <input type="radio" name="hitokoto_0" value="副業でお小遣いを稼いでいます！"> 副業でお小遣いを稼いでいます！<br>
-        <input type="radio" name="hitokoto_0" value="個人事業主として活動しています！"> 個人事業主として活動しています！<br>
-        <p>その他<input type="text" size="60" name="hitokoto_0" class="hoge"></p>
-    </p>
-
-    <p>人生で初めて取り組んだ案件を見つけた場所をできるだけ具体的に教えてください！<br>
-        （例 webのクラウドワークスというサイトに会員登録をして応募しました! 知人から教えてもらった〇〇というサイトから探しました など）<br>
-        <input type="text" size="100" name="content_1" class="hoge">
-    </p>
-
-    <p>初めて受注した案件の業務内容を具体的に教えてください<br>
-        <textarea name="content_2" cols="80" rows="5" class="hoge"></textarea>
-    </p>
-
-    <p>初めての案件にかかった時間（案件をとってから完了するまで）<br>
-        <input type="text" size="10" name="Total_time" class="hoge">
-    </p>
-
-    <p>初めて受注した案件に取り組んでみて、頑張ったこと、大変だったこと、追加で勉強した事などがあれば、詳しく教えてください！<br>
-        <textarea name="content_3" cols="80" rows="5" class="hoge"></textarea>
-    </p>
-
-    <p>もしよければ初案件の報酬金額を教えてください<br>
-        <input type="text" size="30" name="reward_first" class="hoge">
-    </p>
-
-    <br>
-
-
-
-
-
-
-
-<!-- 
-    <p>プロフィールの見出しになる部分です<br>自分に一番近いものを選んでください！<br>
-        <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで就職（転職）できました!">SUNABACOのおかげで就職（転職）できました!<br>
-        <input type="radio" name="hitokoto_ten" value="プログラミングの仕事が楽しいです！"> プログラミングの仕事が楽しいです！<br>
-        <input type="radio" name="hitokoto_ten" value="SUNABACOのおかげで考え方が変わりました!"> SUNABACOのおかげで考え方が変わりました!<br>
-        <input type="radio" name="hitokoto_ten" value="在宅で仕事をしています！"> 在宅で仕事をしています！<br>
-        <input type="radio" name="hitokoto_ten" value="プログラミングは楽しい！"> プログラミングは楽しい！<br>
-    </p> -->
-
-
-    <!-- <p>就職先・転職先を見つけた場所をできるだけ具体的に教えてください！<br>
-        （例 転職サイトのリクナビネクストで今の会社に応募しました！　SUNABACOの同期から、市役所で出ていた求人を教えてもらいました！ など）<br>
-        <input type="text" size="100" name="content_ten1">
-
-    </p>
-
-    <p>就職先・転職先の仕事内容を具体的に教えてください！<br>
-        <input type="text" size="100" name="content_ten2">
-    </p>
-
-    <p>SUNABACO卒業後に就職・転職をして、プログラミングに関わる仕事をするにあたり、今の仕事について「楽しいと感じる事」「むずかしい（辛い）」と感じる事を教えてください<br>
-        <textarea name="content_ten3" cols="80" rows="5"></textarea>
-    </p>
-
-    <h4>創業された方</h4>
-    <p>もし可能であれば、創業してどのようなことをされているのか（どのような会社を創業したのか）を教えてください！<br>
-        <textarea name="sougyou" cols="80" rows="5"></textarea>
-    </p>
- -->
-
-    <p>これから「在宅で仕事がしたい！」と考えている人にアドバイスをお願いします！🙇<br>
-        <textarea name="memo_last" cols="80" rows="5" class="hoge"></textarea>
-    </p>
-
-
-
-    <div class="saisyuu">
-    <h3>内容が確認できたら<span>必ず</span>チェックを入れてください！！</h3>
-        <p>
-        <input type="radio" size="100" name="class_00" value="在宅">投稿内容を確認しました！！
-        <!-- <input type="radio" size="50" name="class_00" value="就職・転職">就職・転職
-        <input type="radio" size="50" name="class_00" value="創業">創業 -->
-        </p>
-    </div>
-
-    <br>
-
-
-    
-    
-
-    <input type="submit" name="save" value="送信" class="btn-submit_add"> 
-</div>
-</div>
-</form>
-
-<a href="/">mainページへ</a>
-
-{% endblock %}

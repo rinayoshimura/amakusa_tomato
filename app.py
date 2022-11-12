@@ -19,6 +19,11 @@ app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 
 #main.htmlにとぶ
 @app.route("/")
+def start():
+    return render_template("start.html")
+
+#main.htmlにとぶ
+@app.route("/main")
 def main():
     return render_template("main.html")
 
@@ -58,7 +63,7 @@ def add_post():
     c.execute("INSERT INTO users VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);",(display_name,twitter_id,era,place,hitokoto_0,seibetu,Total_time,sunabaco,hitokoto_ten,content_ten1,content_ten2,reward_first,content_1,content_2,content_3,content_ten3,sougyou,memo_last,class_00,))
     conn.commit()
     c.close()
-    return redirect("/")
+    return redirect("/login")
 
 
 
@@ -502,6 +507,86 @@ def ten_detail():
 @app.route("/mokuteki")
 def mokuteki():
     return render_template("mokuteki.html")
+
+
+
+
+#--------------------------------------------------------------------------------------------------------------
+#新規登録機能
+#新規登録ページの表示
+
+@app.route("/regist",methods = ["GET"])
+def regist_get():
+    if "user_id" in session:
+        return render_template("main.html")
+    else:
+        return render_template("regist.html")
+
+
+#入力したデータをDBに追加する処理
+@app.route("/regist", methods = ["POST"])
+def regist_post():
+    #入力フォームに入ってきたデータを取ってきて、DBに登録
+    #入力フォームに入ってきた値を受け取る
+    name = request.form.get("user_name") 
+    password = request.form.get("password") 
+    #「sqlite3でtask.dbに接続してね」ということをconnに代入
+    conn = sqlite3.connect("try.db")
+    #「sqlite3で接続したものを操作してね」ということをcに代入
+    c = conn.cursor()
+    #()内のSQL文を実行
+    c.execute("INSERT INTO regist_file VALUES (NULL,?,?);",(name,password))
+    #DBに追加するので、変更を保存する
+    conn.commit()
+    #color.dbとの接続を終了
+    c.close()
+    #ここに書いていく
+    return render_template("sentaku_add.html")
+
+
+
+
+
+#ログイン機能
+#ログインページの表示
+@app.route("/login", methods = ["GET"])
+def login_get():
+    if "user_id" in session:
+        return  render_template("main.html")
+    else:
+        return render_template("login.html")
+
+#ログイン機能実装
+@app.route("/login", methods = ["POST"])
+def login_post():
+    name = request.form.get("user_name") 
+    password = request.form.get("password") 
+    #「sqlite3でtask.dbに接続してね」ということをconnに代入
+    conn = sqlite3.connect("try.db")
+    #「sqlite3で接続したものを操作してね」ということをcに代入
+    c = conn.cursor()
+    #()内のSQL文を実行
+    c.execute("SELECT id FROM regist_file WHERE name = ? AND password = ?;",(name,password))
+    user_id = c.fetchone()
+    #color.dbとの接続を終了
+    c.close()
+    if user_id is None:
+        return render_template("login.html")
+    else:
+        # session["user_id"] = user_id[0]
+        return render_template("main.html")
+
+#ログアウト機能
+@app.route("/logout", methods = ["GET"])
+def logout():
+    session.pop("user_id",None) #sessionからuser_idを取り除く
+    return redirect("/login")
+
+#404エラー
+@app.errorhandler(404) # 404エラーが発生した場合の処理
+def error_404(error):
+    #return render_template('404.html')
+    return "ここは404エラー！お探しのページはみつからなかったよ"
 
 
 
