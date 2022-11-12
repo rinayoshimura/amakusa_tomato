@@ -373,3 +373,25 @@ p {
       display:none;
     }
   }
+
+
+
+
+
+
+/*registとloginページ*/
+.regist_page{
+    background-color: #9ef6f6;
+    position: relative;
+    padding: 20vh 10vh;
+    margin-top: 45vh;
+
+}
+
+.login_page{
+    background-color: #9ef6f6;
+    position: relative;
+    padding: 20vh 10vh;
+    margin-top: 45vh;
+
+}
